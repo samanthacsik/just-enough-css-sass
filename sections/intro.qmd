@@ -1,0 +1,77 @@
+---
+format: revealjs
+---
+
+## {#do-you-use-the-web data-menu-title="Do you use the web?"}
+
+[{{< fa hand title="An open hand" >}} Hands up if you spend time on the web!]{.slide-title}
+
+<hr>
+
+<br>
+
+. . .
+
+{{< fa hand title="An open hand" >}} Keep 'em up if you're generally familiar with what's "under the hood" of any given web page
+
+<br>
+
+. . .
+
+{{< fa hand title="An open hand" >}} Who's spent time developing and styling web pages?
+
+<br>
+
+. . . 
+
+::: {.center-text}
+*Aside from surfing the web, I really didn't know anything about the latter two points until just a couple years ago.*
+:::
+
+---
+
+## {#meds-websites data-menu-title="MEDS websites"}
+
+[Teaching in [MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds) motivated me to learn more about web page styling]{.slide-title}
+
+<hr>
+
+<br>
+
+::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+knitr::include_graphics("images/teaching.jpeg")
+```
+:::
+
+::: {.column width="50%"}
+::: incremental
+- [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/)
+- [Customizing Quarto websites: Make your website stand out using Sass & CSS](https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide)
+- [EDS 430: Intro to Shiny](https://ucsb-meds.github.io/EDS430-Shiny/#/title-slide)
+:::
+:::
+
+::::
+
+---
+
+[I learned quickly that webpages would be pretty boring without added styling]{.slide-title}
+
+<hr>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+knitr::include_graphics("images/github-default.png")
+```
+
+:::
+
+::: {.column width="50%"}
+:::
+
+::::

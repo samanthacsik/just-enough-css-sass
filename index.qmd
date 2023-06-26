@@ -1,0 +1,56 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    theme:
+      - nceas_styles.scss
+---
+
+## {#title-slide data-menu-title="Title Slide"} 
+
+[Just enough CSS (and Sass)]{.custom-title}
+
+[for data scientists looking to add a little pizazz to their webpages]{.custom-subtitle}
+
+<!-- Using {{< fa brands css3-alt title = "CSS 3 icon" >}} & {{< fa brands sass title = "Sass icon" >}}  -->
+
+<hr class="hr-red">
+
+<br>
+
+:::: {.columns} 
+
+::: {.column width="50%"}
+[**Sam Csik** |]{.custom-subtitle2}<br>
+[Data Training Coordinator]{.custom-subtitle2}<br>
+[*National Center for Ecological Analysis & Synthesis*]{.custom-subtitle3}
+:::
+
+::: {.column width="50%"}
+[**Roundtable** |]{.custom-subtitle2}<br>
+[August 2023]{.custom-subtitle2}<br>
+[*National Center for Ecological Analysis & Synthesis*]{.custom-subtitle3}
+:::
+
+::::
+
+<br>
+
+::: {.center-text .caption-text}
+Slides & source code available on [{{< fa brands github title = "GitHub icon" >}}](https://github.com/samanthacsik/just-enough-css-sass)
+:::
+
+---
+
+{{< include sections/intro.qmd >}}
+
+---
+
+[title]{.slide-title}
+
+here is some sample text to test with
+
+
