@@ -2,11 +2,23 @@
 format: revealjs
 ---
 
-##  {#html-attribures data-menu-title="HTML attributes"}
+##  {#practice-html data-menu-title="Check out some HTML"}
 
 [Let's take a look at some HTML]{.slide-title}
 
 <hr>
+
+::: {.body-text .center-text}
+Check out the following HTML by opening the [`practice-html.html`](https://github.com/samanthacsik/cute-cats-dogs/blob/main/practice-files/practice-html.html) file in RStudio
+:::
+
+::: {.panel-tabset}
+
+## `practice-html.html`
+
+::: {.body-text .center-text}
+To open in RStudio, click on the **`practice-html.html`** file in Files pane, then **Open in Editor**
+:::
 
 ```{html}
 #| eval: false
@@ -24,3 +36,27 @@ format: revealjs
 </body>
 </html>
 ```
+
+## rendered HTML
+
+::: {.body-text .center-text}
+Click **Preview** to render the HTML
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "65%" 
+knitr::include_graphics("images/rendered-practice-html.png")
+```
+
+:::
+
+---
+
+##  {#md-practice data-menu-title="Check out the corresponding markdown"}
+
+[The same content written using markdown syntax in a `.qmd` file]{.slide-title}
+
+<hr>

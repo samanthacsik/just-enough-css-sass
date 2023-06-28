@@ -11,6 +11,7 @@ $light-green: #589244;
 $yellow: #E9A300;
 $red: #A23601;
 $white: #FFFFFF;
+$off-white: #F7F7F7; 
 $gray: #ADADAD;
 $black: #525452; 
 
@@ -25,6 +26,9 @@ $body-bg: $white;
 $link-color: $red; 
 $body-color: $black; 
 $code-color: $light-green;
+$code-bg: $white;
+$code-block-font-size: 0.5em;
+$code-block-bg: $off-white;
 
 /*-- scss:rules --*/
 
@@ -34,8 +38,9 @@ $code-color: $light-green;
 hr {
   border: 5px solid $yellow;
   border-radius: 5px;
+  margin-bottom: 30px;
 }
-
+ 
 // table header size
 th {
 font-size: 35px;  

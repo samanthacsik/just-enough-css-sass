@@ -48,7 +48,6 @@ Slides & source code available on [{{< fa brands github title = "GitHub icon" >}
 [Setup]{.slide-title}
 
 <hr>
-<br>
 
 ::: {.large-body-text .center-text}
 **There will be some hands-on activities sprinkled throughout this talk!**

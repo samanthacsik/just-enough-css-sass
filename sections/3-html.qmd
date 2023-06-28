@@ -72,7 +72,7 @@ In Markdown syntax, this HTML element would be written as: <br> `# Welcome to yo
 <hr>
 
 ::: {.body-text .center-text}
-Browse a more complete list of [HTML tags](https://www.w3schools.com/tags/default.asp).
+**Browse a more complete list of [HTML tags](https://www.w3schools.com/tags/default.asp).**
 :::
 
 | Tag                 | What it does                                                 |
