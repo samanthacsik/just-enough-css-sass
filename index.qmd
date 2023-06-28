@@ -13,7 +13,7 @@ format:
 
 [Just enough CSS (and Sass)]{.custom-title}
 
-[for data scientists looking to add a little pizazz to their webpages]{.custom-subtitle}
+[for data scientists looking to add a little pizzazz to their webpages]{.custom-subtitle}
 
 <!-- Using {{< fa brands css3-alt title = "CSS 3 icon" >}} & {{< fa brands sass title = "Sass icon" >}}  -->
 
@@ -45,12 +45,17 @@ Slides & source code available on [{{< fa brands github title = "GitHub icon" >}
 
 ---
 
-{{< include sections/intro.qmd >}}
+{{< include sections/1-intro.qmd >}}
 
 ---
 
-[title]{.slide-title}
+{{< include sections/2-html-css-intro.qmd >}}
 
-here is some sample text to test with
+---
 
+{{< include sections/3-html.qmd >}}
+
+---
+
+{{< include sections/4-write-html.qmd >}}
 

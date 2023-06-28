@@ -56,22 +56,3 @@ knitr::include_graphics("images/teaching.jpeg")
 
 ::::
 
----
-
-[I learned quickly that webpages would be pretty boring without added styling]{.slide-title}
-
-<hr>
-
-:::: {.columns}
-
-::: {.column width="50%"}
-```{r}
-knitr::include_graphics("images/github-default.png")
-```
-
-:::
-
-::: {.column width="50%"}
-:::
-
-::::

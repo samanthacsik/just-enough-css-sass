@@ -1,0 +1,141 @@
+---
+format: revealjs
+---
+
+##  {#building-blocks-html data-menu-title="HTML & CSS = building blocks (1/2)"}
+
+[HTML & CSS are the building blocks of web pages]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+[**HTML**](https://html.spec.whatwg.org/) (Hypertext Markup Language) is a *markup language* that **tells web browsers how to *structure* web pages**. You can think of HTML as the ***skeleton* of a web page**. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/html.png")
+```
+
+::: {.caption-text .center-text}
+Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustration)
+:::
+
+---
+
+##  {#building-blocks-CSS data-menu-title="HTML & CSS = building blocks (2/2)"}
+
+[HTML & CSS are the building blocks of web pages]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+[**CSS**](https://www.w3.org/Style/CSS/Overview.en.html) (Cascading Style Sheets) is a programming language that allows you to **control how HTML elements *look* on a web page**. You can think of CSS as the ***outfit* that is styling the skeleton**. It allows authors to control aspects such as the colors, layout, and font style.
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/css.png")
+```
+
+::: {.caption-text .center-text}
+Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustration)
+:::
+
+---
+
+##  {#browser-styling data-menu-title="Browser styling"}
+
+[Your browser has its own internal stylesheet to render HTML]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+Your browser will style HTML documents using an internal style sheet, which ensures that headings are larger than normal text, links are highlighted, lists and tables are structured correctly, etc.
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/html-github.png")
+```
+
+::: {.caption-text .center-text}
+HTML
+:::
+
+:::
+
+::: {.column width="50%"}
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/browser-styling-github.png")
+```
+
+::: {.caption-text .center-text}
+Browser default styling
+:::
+
+:::
+
+::::
+
+---
+
+##  {#css-styling data-menu-title="CSS styling"}
+
+[CSS adds *pizzazz* to web page renderings]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+CSS allows website developers to add additional styling to web browser defaults. Otherwise, websites would be pretty boring to look at (and they'd all generally look the same).
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/browser-styling-github.png")
+```
+
+::: {.caption-text .center-text}
+Browser default styling
+:::
+
+:::
+
+::: {.column width="50%"}
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/css-styling-github.png")
+```
+
+::: {.caption-text .center-text}
+CSS styling
+:::
+
+:::
+
+::::
