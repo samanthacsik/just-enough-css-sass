@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #767676;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
+    div.sourceCode
+      { color: #545454; background-color: #fefefe; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #545454; } /* Normal */
+    code span.al { color: #7928a1; } /* Alert */
+    code span.an { color: #696969; } /* Annotation */
+    code span.at { color: #a55a00; } /* Attribute */
+    code span.bn { color: #7928a1; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #d91e18; } /* ControlFlow */
+    code span.ch { color: #008000; } /* Char */
+    code span.cn { color: #d91e18; } /* Constant */
+    code span.co { color: #696969; } /* Comment */
+    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
+    code span.do { color: #696969; font-style: italic; } /* Documentation */
+    code span.dt { color: #7928a1; } /* DataType */
+    code span.dv { color: #7928a1; } /* DecVal */
+    code span.er { color: #7928a1; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #a55a00; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #696969; } /* Information */
+    code span.kw { color: #d91e18; } /* Keyword */
+    code span.op { color: #00769e; } /* Operator */
+    code span.ot { color: #d91e18; } /* Other */
+    code span.pp { color: #7928a1; } /* Preprocessor */
+    code span.sc { color: #00769e; } /* SpecialChar */
+    code span.ss { color: #008000; } /* SpecialString */
+    code span.st { color: #008000; } /* String */
+    code span.va { color: #a55a00; } /* Variable */
+    code span.vs { color: #008000; } /* VerbatimString */
+    code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
 <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
 <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -330,8 +395,7 @@
 
 <section id="title-slide" class="slide level2 center" data-menu-title="Title Slide"><h2></h2>
 <p><span class="custom-title">Just enough CSS (and Sass)</span></p>
-<p><span class="custom-subtitle">for data scientists looking to add a little pizzazz to their webpages</span></p>
-<!-- Using  &   -->
+<p><span class="custom-subtitle">for data scientists looking to add a little <em>pizzazz</em> to their webpages</span></p>
 <hr class="hr-red">
 <p><br></p>
 <div class="columns">
@@ -345,6 +409,38 @@
 <div class="center-text caption-text">
 <p>Slides &amp; source code available on <a href="https://github.com/samanthacsik/just-enough-css-sass"><i class="fa-brands fa-github" aria-label="github"></i></a></p>
 </div>
+</section><section id="follow-along" class="slide level2" data-menu-title="Setup"><h2></h2>
+<p><span class="slide-title">Setup</span></p>
+<hr>
+<p><br></p>
+<div class="large-body-text center-text">
+<p><strong>There will be some hands-on activities sprinkled throughout this talk!</strong></p>
+</div>
+<div class="body-text center-text">
+<!-- If you'd like to follow along, please take a moment to grab the materials from the associated GitHub repository, <https://github.com/samanthacsik/cute-cats-dogs>, by either forking/cloning or downloading the repo. You can find **instructions for both options, below.** -->
+<p><em>If you’d like to follow along, please be sure to:</em></p>
+</div>
+<div class="body-text">
+<ol type="1">
+<li>
+<strong>install <a href="https://cloud.r-project.org/">R</a> and <a href="https://posit.co/products/open-source/rstudio/">RStudio</a></strong> – I’ll be using RStudio, though you may use alternative IDEs (e.g.&nbsp;VS Code) if that’s where you’re most comfortable</li>
+<li>
+<strong>install <a href="https://quarto.org/docs/get-started/">Quarto</a></strong> – this may require updating R/RStudio if you already have those installed</li>
+<li>
+<strong>grab the materials from GitHub</strong>, <a href="https://github.com/samanthacsik/cute-cats-dogs" class="uri">https://github.com/samanthacsik/cute-cats-dogs</a>, using one of the following approaches:
+<ol type="a">
+<li>
+<a href="https://github.com/samanthacsik/cute-cats-dogs/wiki/Download-the-GitHub-repository-to-work-locally">instructions for downloading the GitHub repository to work locally</a> (do this if you <strong>don’t</strong> have git/GitHub configured)</li>
+<li>
+<a href="https://github.com/samanthacsik/cute-cats-dogs/wiki/Forking-&amp;-Cloning-a-GitHub-respository">instructions for forking &amp; cloning the GitHub respository</a> (do this if you <strong>do</strong> have git/GitHub configured)</li>
+</ol>
+</li>
+</ol>
+</div>
+<!-- ::: {.body-text} -->
+<!-- -  If you **don't** have git/GitHub configured: [Instructions for downloading the GitHub repository to work locally](https://github.com/samanthacsik/cute-cats-dogs/wiki/Download-the-GitHub-repository-to-work-locally) -->
+<!-- - If you **do** have git/GitHub configured: [Instructions for forking & cloning the GitHub respository](https://github.com/samanthacsik/cute-cats-dogs/wiki/Forking-&-Cloning-a-GitHub-respository) -->
+<!-- ::: -->
 </section><section id="do-you-use-the-web" class="slide level2" data-menu-title="Do you use the web?"><h2></h2>
 <p><span class="slide-title"><i class="fa-solid fa-hand" title="An open hand" aria-label="hand"></i> Hands up if you spend time on the web!</span></p>
 <hr>
@@ -606,7 +702,23 @@
 <p><strong>The basic anatomy of an HTML attribute:</strong></p>
 </div>
 
-<img data-src="images/html-attribute.png" style="width:65.0%" class="r-stretch quarto-figure-center"></section><section class="slide level2"><p>4</p>
+<img data-src="images/html-attribute.png" style="width:65.0%" class="r-stretch quarto-figure-center"></section><section id="html-attribures" class="slide level2" data-menu-title="HTML attributes"><h2></h2>
+<p><span class="slide-title">Let’s take a look at some HTML</span></p>
+<hr>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="kw">&lt;body&gt;</span> </span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>  <span class="kw">&lt;h1&gt;</span>Here is my level one header<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="kw">&lt;p&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="kw">&lt;p&gt;</span>Here is my second paragraph, where you can read more about NCEAS <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://www.nceas.ucsb.edu/roundtable"</span><span class="kw">&gt;</span>Roundtables<span class="kw">&lt;/a&gt;</span>.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="footer footer-default">
 
 </div>
