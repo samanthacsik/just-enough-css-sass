@@ -752,11 +752,11 @@
 </div>
 </div>
 </section><section id="md-practice" class="slide level2" data-menu-title="Check out the corresponding markdown"><h2></h2>
-<p><span class="slide-title">markdown lets us “write” HTML without knowing HTML</span></p>
+<p><span class="slide-title-smaller">markdown makes it easy to “write” HTML</span></p>
 <!-- The same content written using markdown syntax in a `.qmd` file -->
 <hr>
 <div class="body-text center-text">
-<p>Check out the following HTML by opening the <a href="https://github.com/samanthacsik/cute-cats-dogs/blob/main/practice-files/practice-markdown.qmd"><code>practice-markdown.qmd</code> file</a> in RStudio</p>
+<p>Check out the following markdown by opening the <a href="https://github.com/samanthacsik/cute-cats-dogs/blob/main/practice-files/practice-markdown.qmd"><code>practice-markdown.qmd</code> file</a> in RStudio</p>
 </div>
 <div class="panel-tabset">
 <ul id="tabset-2" class="panel-tabset-tabby">
@@ -776,7 +776,7 @@
 </div>
 <div id="tabset-2-2">
 <div class="body-text center-text">
-<p>Click <strong>Render</strong> to render your <code>.qmd</code> file as HTML – it should open in RStudio’s Viewer pane and generate a <code>practice-markdown.html</code> file</p>
+<p>Click <strong>Render</strong> to render your <code>.qmd</code> file as HTML – it should open in RStudio’s Viewer pane and generate a <code>practice-markdown.html</code> file. <strong>Note:</strong> Quarto applies the default Bootstrap 5 theme to rendered markdown (giving it a bit of styling as compared to our HTML on the <a href="http://localhost:6131/#/practice-html">previous slide</a>).</p>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -821,6 +821,7 @@
 </div>
 </section><section id="select-tags" class="slide level2" data-menu-title="Element &amp; Grouping Selectors"><h2></h2>
 <p><span class="slide-title">Select an element(s) based on its tag</span></p>
+<hr>
 <div class="panel-tabset">
 <ul id="tabset-3" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-3-1">Element Selectors</a></li>
@@ -900,6 +901,44 @@
 </div>
 </div>
 </div>
+</div>
+</section><section id="class-selectors" class="slide level2" data-menu-title="Class Selectors"><h2></h2>
+<p><span class="slide-title-smaller">Target an element(s) using class attributes</span></p>
+<hr>
+<div class="body-text">
+<p>A class selector uses the <em><code>class</code> attribute</em> of an HTML element to style that specific element. Class selectors are written using a <code>.</code> followed by the selector name, e.g.&nbsp;<code>.selector</code>. HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2"&gt;</code></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>CSS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">.blue-italicized</span> {</span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>HTML</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-italicized"</span><span class="kw">&gt;</span>My first paragraph is styled<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="kw">&lt;p&gt;</span>But my second paragraph is not<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><br><br></p>
+<div class="center-text">
+<p><strong>Output</strong></p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/class-selector.png" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="body-text important-text-bg center-text">
+<p><em>If you’re like me, you’ll probably find yourself using class selectors most often!</em></p>
 </div>
 <div class="footer footer-default">
 

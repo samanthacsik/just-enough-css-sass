@@ -72,6 +72,8 @@ knitr::include_graphics("images/css-syntax.png")
 
 [Select an element(s) based on its tag]{.slide-title}
 
+<hr>
+
 ::: {.panel-tabset}
 
 ## Element Selectors
@@ -185,3 +187,68 @@ knitr::include_graphics("images/grouping-selector.png")
 ::::
 
 :::
+
+---
+
+##  {#class-selectors data-menu-title="Class Selectors"}
+
+[Target an element(s) using class attributes]{.slide-title-smaller}
+
+<hr>
+
+::: {.body-text}
+A class selector uses the *`class` attribute* of an HTML element to style that specific element. Class selectors are written using a `.` followed by the selector name, e.g. `.selector`. HTML elements can have more than one class, e.g. `<p class="class1 class2">`
+:::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**CSS**
+
+```{css}
+#| eval: false
+#| echo: true
+.blue-italicized {
+  color: blue;
+  font-style: italic;
+}
+```
+
+**HTML**
+
+```{html}
+#| eval: false
+#| echo: true
+<p class="blue-italicized">My first paragraph is styled</p>
+<p>But my second paragraph is not</p>
+```
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+<br>
+
+::: {.center-text}
+**Output**
+:::
+
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/class-selector.png")
+```
+
+:::
+
+::::
+
+::: {.body-text .important-text-bg .center-text}
+*If you're like me, you'll probably find yourself using class selectors most often!*
+:::
+

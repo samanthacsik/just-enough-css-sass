@@ -57,14 +57,14 @@ knitr::include_graphics("images/rendered-practice-html.png")
 
 ##  {#md-practice data-menu-title="Check out the corresponding markdown"}
 
-[markdown lets us "write" HTML without knowing HTML]{.slide-title}
+[markdown makes it easy to "write" HTML]{.slide-title-smaller}
 
 <!-- The same content written using markdown syntax in a `.qmd` file -->
 
 <hr>
 
 ::: {.body-text .center-text}
-Check out the following HTML by opening the [`practice-markdown.qmd` file](https://github.com/samanthacsik/cute-cats-dogs/blob/main/practice-files/practice-markdown.qmd) in RStudio
+Check out the following markdown by opening the [`practice-markdown.qmd` file](https://github.com/samanthacsik/cute-cats-dogs/blob/main/practice-files/practice-markdown.qmd) in RStudio
 :::
 
 ::: {.panel-tabset}
@@ -86,7 +86,7 @@ Here is my second paragraph, where you can read more about NCEAS [Roundtables](h
 ## rendered HTML
 
 ::: {.body-text .center-text}
-Click **Render** to render your `.qmd` file as HTML -- it should open in RStudio's Viewer pane and generate a `practice-markdown.html` file
+Click **Render** to render your `.qmd` file as HTML -- it should open in RStudio's Viewer pane and generate a `practice-markdown.html` file. **Note:** Quarto applies the default Bootstrap 5 theme to rendered markdown (giving it a bit of styling as compared to our HTML on the [previous slide](http://localhost:6131/#/practice-html)).
 :::
 
 ```{r}
