@@ -56,3 +56,15 @@ knitr::include_graphics("images/teaching.jpeg")
 
 ::::
 
+---
+
+## {#requirements data-menu-title="Requirements"}
+
+[You need three things to styles web pages]{.slide-title}
+
+1. HTML element(s)
+2. CSS rules
+3. apply those css rules to your html
+
+??? something like this
+

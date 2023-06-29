@@ -59,6 +59,13 @@ td {
   border-radius: 5px;
 }
 
+// see https://stackoverflow.com/questions/1734618/how-to-increase-the-gap-between-text-and-underlining-in-css
+.yellow-underline { 
+  text-decoration: underline $yellow;
+  text-underline-offset: 10px; // https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset
+  text-decoration-thickness: 4px;
+}
+
 // cover slide title
 .custom-title { 
   font-family: $font-family-serif;

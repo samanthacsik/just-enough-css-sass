@@ -144,9 +144,9 @@ In Markdown syntax, this HTML element would be written as: <br> `# Welcome to yo
 Attributes can be used for **targeted styling with CSS** (e.g. **class** attributes) -- more on this soon!
 :::
 
-::: {.body-text .center-text}
-**The basic anatomy of an HTML attribute:**
-:::
+<!-- ::: {.body-text .center-text} -->
+<!-- **The basic anatomy of an HTML attribute:** -->
+<!-- ::: -->
 
 ```{r}
 #| eval: true 

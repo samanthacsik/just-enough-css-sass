@@ -9,7 +9,7 @@ format: revealjs
 <hr>
 
 ::: {.body-text .center-text}
-Check out the following HTML by opening the [`practice-html.html`](https://github.com/samanthacsik/cute-cats-dogs/blob/main/practice-files/practice-html.html) file in RStudio
+Check out the following HTML by opening the [`practice-html.html` file](https://github.com/samanthacsik/cute-cats-dogs/blob/main/practice-files/practice-html.html) in RStudio
 :::
 
 ::: {.panel-tabset}
@@ -57,6 +57,44 @@ knitr::include_graphics("images/rendered-practice-html.png")
 
 ##  {#md-practice data-menu-title="Check out the corresponding markdown"}
 
-[The same content written using markdown syntax in a `.qmd` file]{.slide-title}
+[markdown lets us "write" HTML without knowing HTML]{.slide-title}
+
+<!-- The same content written using markdown syntax in a `.qmd` file -->
 
 <hr>
+
+::: {.body-text .center-text}
+Check out the following HTML by opening the [`practice-markdown.qmd` file](https://github.com/samanthacsik/cute-cats-dogs/blob/main/practice-files/practice-markdown.qmd) in RStudio
+:::
+
+::: {.panel-tabset}
+
+## `practice-markdown.qmd`
+
+::: {.body-text .center-text}
+To open in RStudio, click on the **`practice-markdown.qmd`** file in Files pane
+:::
+
+```{.md}
+# Here is my level one header
+
+Here is my first paragraph
+
+Here is my second paragraph, where you can read more about NCEAS [Roundtables](https://www.nceas.ucsb.edu/roundtable).
+```
+
+## rendered HTML
+
+::: {.body-text .center-text}
+Click **Render** to render your `.qmd` file as HTML -- it should open in RStudio's Viewer pane and generate a `practice-markdown.html` file
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "65%" 
+knitr::include_graphics("images/rendered-practice-markdown.png")
+```
+
+:::
