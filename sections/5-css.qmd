@@ -27,7 +27,7 @@ knitr::include_graphics("images/css-logo.png")
 <hr>
 
 ::: {.body-text}
-CSS is a rule-based language, meaning that it allows you to **define groups of styles that should be applied to particular elements or groups of elements on a web page**. For example, *"I want all level one (`<h1>`) headings to be green text with a bit of extra space between each letter"* could be coded as:
+CSS is a rule-based language -- it allows you to **define groups of styles that should be applied to particular elements or groups of elements on a web page**. For example, *"I want all level one (`<h1>`) headings to be green text with a bit of extra space between each letter"* could be coded as:
 :::
 
 <!-- :::: {.columns} -->
@@ -58,3 +58,130 @@ knitr::include_graphics("images/css-syntax.png")
 <!-- ::: -->
 
 <!-- :::: -->
+<br>
+
+. . . 
+
+::: {.body-text}
+**We're going to focus on *element* and *class* selectors**, but check out [these slides](https://ucsb-meds.github.io/customizing-quarto-websites/#/selector-types) for an overview of other simple selectors. [W3 Schools](https://www.w3schools.com/css/css_selectors.asp) is also an excellent resource (for more than just CSS!) if you're looking to do a deeper dive.
+:::
+
+---
+
+##  {#select-tags data-menu-title="Element & Grouping Selectors"}
+
+[Select an element(s) based on its tag]{.slide-title}
+
+::: {.panel-tabset}
+
+## Element Selectors
+
+::: {.body-text}
+Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.
+:::
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+**CSS**
+
+```{css}
+#| eval: false
+#| echo: true
+h1 {
+  color: green;
+  letter-spacing: 5px;
+}
+```
+
+**HTML**
+
+```{html}
+#| eval: false
+#| echo: true
+<h1>My level one header will be styled</h1>
+<h2>This level two header will not be styled</h2>
+<p>Neither will this paragaph</p>
+<h1>But this second level one header will be</h1>
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+<br>
+
+::: {.center-text}
+**Output**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/element-selector.png")
+```
+
+:::
+
+::::
+
+## Grouping Selectors
+
+::: {.body-text}
+Group multiple element selectors together (separated by commas) if you want them all styled the same way.
+:::
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+**CSS**
+
+```{css}
+#| eval: false
+#| echo: true
+h1, h2, p {
+  text-align: center;
+  color: purple;
+}
+```
+
+**HTML**
+
+```{html}
+#| eval: false
+#| echo: true
+<h1>My level one header will be styled</h1>
+<h2>This level two header will be styled</h2>
+<h3>This level three header will not be styled</h3>
+<p>This paragraph will be styled</p>
+```
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+<br>
+
+::: {.center-text}
+**Output**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/grouping-selector.png")
+```
+
+:::
+
+::::
+
+:::

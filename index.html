@@ -799,7 +799,7 @@
 <p><span class="slide-title">CSS is a rule-based language</span></p>
 <hr>
 <div class="body-text">
-<p>CSS is a rule-based language, meaning that it allows you to <strong>define groups of styles that should be applied to particular elements or groups of elements on a web page</strong>. For example, <em>“I want all level one (<code>&lt;h1&gt;</code>) headings to be green text with a bit of extra space between each letter”</em> could be coded as:</p>
+<p>CSS is a rule-based language – it allows you to <strong>define groups of styles that should be applied to particular elements or groups of elements on a web page</strong>. For example, <em>“I want all level one (<code>&lt;h1&gt;</code>) headings to be green text with a bit of extra space between each letter”</em> could be coded as:</p>
 </div>
 <!-- :::: {.columns} -->
 <!-- ::: {.column width="50%"} -->
@@ -813,7 +813,95 @@
 <!-- ::: -->
 <!-- ::: -->
 <!-- :::: -->
-<img data-src="images/css-syntax.png" style="width:85.0%" class="r-stretch quarto-figure-center"><div class="footer footer-default">
+<img data-src="images/css-syntax.png" style="width:85.0%" class="r-stretch quarto-figure-center"><p><br></p>
+<div class="fragment">
+<div class="body-text">
+<p><strong>We’re going to focus on <em>element</em> and <em>class</em> selectors</strong>, but check out <a href="https://ucsb-meds.github.io/customizing-quarto-websites/#/selector-types">these slides</a> for an overview of other simple selectors. <a href="https://www.w3schools.com/css/css_selectors.asp">W3 Schools</a> is also an excellent resource (for more than just CSS!) if you’re looking to do a deeper dive.</p>
+</div>
+</div>
+</section><section id="select-tags" class="slide level2" data-menu-title="Element &amp; Grouping Selectors"><h2></h2>
+<p><span class="slide-title">Select an element(s) based on its tag</span></p>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-3-1">Element Selectors</a></li>
+<li><a href="#tabset-3-2">Grouping Selectors</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="body-text">
+<p>Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>CSS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1"></a>h1 {</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="kw">color</span>: <span class="cn">green</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>HTML</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will not be styled<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">&lt;p&gt;</span>Neither will this paragaph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="kw">&lt;h1&gt;</span>But this second level one header will be<span class="kw">&lt;/h1&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><br><br></p>
+<div class="center-text">
+<p><strong>Output</strong></p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/element-selector.png" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="body-text">
+<p>Group multiple element selectors together (separated by commas) if you want them all styled the same way.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><strong>CSS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1"></a>h1<span class="op">,</span> h2<span class="op">,</span> p {</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="kw">color</span>: <span class="cn">purple</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>HTML</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will be styled<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="kw">&lt;h3&gt;</span>This level three header will not be styled<span class="kw">&lt;/h3&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="kw">&lt;p&gt;</span>This paragraph will be styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:40%;">
+<p><br><br></p>
+<div class="center-text">
+<p><strong>Output</strong></p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/grouping-selector.png" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer footer-default">
 
 </div>
 </section>
