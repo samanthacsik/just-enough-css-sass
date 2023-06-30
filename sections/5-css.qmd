@@ -252,3 +252,9 @@ knitr::include_graphics("images/class-selector.png")
 *If you're like me, you'll probably find yourself using class selectors most often!*
 :::
 
+---
+
+##  {#conflicting-rules data-menu-title="Conflicting Rules"}
+
+[Conflicting CSS rules?]{.slide-title}
+

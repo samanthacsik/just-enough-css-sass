@@ -33,6 +33,7 @@ To open in RStudio, click on the **`practice-html.html`** file in Files pane, th
   <h1>Here is my level one header</h1>
   <p>Here is my first paragraph</p>
   <p>Here is my second paragraph, where you can read more about NCEAS <a href="https://www.nceas.ucsb.edu/roundtable">Roundtables</a>.</p>
+  <p>This is very important text!</p>
 </body>
 </html>
 ```
@@ -81,6 +82,8 @@ To open in RStudio, click on the **`practice-markdown.qmd`** file in Files pane
 Here is my first paragraph
 
 Here is my second paragraph, where you can read more about NCEAS [Roundtables](https://www.nceas.ucsb.edu/roundtable).
+
+This is very important text!
 ```
 
 ## rendered HTML
