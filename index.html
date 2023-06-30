@@ -906,7 +906,7 @@
 </div>
 </div>
 </section><section id="class-selectors" class="slide level2" data-menu-title="Class Selectors"><h2></h2>
-<p><span class="slide-title-smaller">Target an element(s) using class attributes</span></p>
+<p><span class="slide-title-smaller">Target an element(s) using class selectors</span></p>
 <hr>
 <div class="body-text">
 <p>A class selector uses the <em><code>class</code> attribute</em> of an HTML element to style that specific element. Class selectors are written using a <code>.</code> followed by the selector name, e.g.&nbsp;<code>.selector</code>. HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2"&gt;</code></p>
@@ -926,7 +926,7 @@
 <span id="cb8-2"><a href="#cb8-2"></a><span class="kw">&lt;p&gt;</span>But my second paragraph is not<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
-<p><br><br></p>
+<p><br></p>
 <div class="center-text">
 <p><strong>Output</strong></p>
 </div>
@@ -940,14 +940,145 @@
 </div>
 </div>
 </div>
-<div class="body-text important-text-bg center-text">
-<p><em>If you’re like me, you’ll probably find yourself using class selectors most often!</em></p>
+</section><section id="spans" class="slide level2" data-menu-title="Spans"><h2></h2>
+<p><span class="slide-title-smaller">Use <code>&lt;span&gt;</code> to target part of an element</span></p>
+<hr>
+<div class="body-text">
+<p>The HTML <code>&lt;span&gt;</code> tag is used to apply class selectors to <em>part</em> of an element.</p>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>CSS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">.blue-italicized</span> {</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>HTML</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">&lt;p&gt;</span>Only the word <span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-italicized"</span><span class="kw">&gt;</span>blue<span class="kw">&lt;/span&gt;</span> is styled.<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<div class="center-text">
+<p><strong>Output</strong></p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/span.png" style="width:85.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section><section id="conflicting-rules" class="slide level2" data-menu-title="Conflicting Rules"><h2></h2>
-<p><span class="slide-title">Conflicting CSS rules?</span></p>
-</section><section id="write-css" class="slide level2" data-menu-title="Write CSS"><h2></h2>
-<p><span class="slide-title-smaller">Let’s write some CSS selectors in <code>styles.css</code></span></p>
+<p><span class="slide-title">CSS rules can conflict – the more specific rule “wins”</span></p>
 <hr>
+<p>It is common to have more than one CSS rule that points to the same element. As you build more complex stylesheets, determining which CSS rule “wins out” can get complicated. For intro CSS purposes, the more specific rule takes precedence.</p>
+</section><section id="write-css" class="slide level2" data-menu-title="Write CSS"><h2></h2>
+<p><span class="slide-title-smaller">Practice writing element &amp; class selectors</span></p>
+<hr>
+<div class="body-text center-text">
+<p>Here, we apply our <code>practice-styles.css</code> stylesheet to <code>practice-html.html</code>.</p>
+</div>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-4-1"><code>practice-styles.css</code></a></li>
+<li><a href="#tabset-4-2"><code>practice-html.html</code></a></li>
+<li><a href="#tabset-4-3">rendered output</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">/* ------- element selectors ------- */</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="co">/* style level one headers */</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>h1 {</span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="kw">background-color</span>: <span class="cn">#49bf96</span><span class="op">;</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a>  <span class="kw">border-radius</span>: <span class="dv">25</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb11-9"><a href="#cb11-9"></a>}</span>
+<span id="cb11-10"><a href="#cb11-10"></a></span>
+<span id="cb11-11"><a href="#cb11-11"></a><span class="co">/* purple italicized hyperlinks */</span></span>
+<span id="cb11-12"><a href="#cb11-12"></a>a {</span>
+<span id="cb11-13"><a href="#cb11-13"></a>  <span class="kw">color</span>: <span class="cn">purple</span><span class="op">;</span></span>
+<span id="cb11-14"><a href="#cb11-14"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb11-15"><a href="#cb11-15"></a>}</span>
+<span id="cb11-16"><a href="#cb11-16"></a></span>
+<span id="cb11-17"><a href="#cb11-17"></a><span class="co">/* ------- class selectors ------- */</span></span>
+<span id="cb11-18"><a href="#cb11-18"></a></span>
+<span id="cb11-19"><a href="#cb11-19"></a><span class="co">/* blue text */</span></span>
+<span id="cb11-20"><a href="#cb11-20"></a><span class="fu">.blue-text</span> {</span>
+<span id="cb11-21"><a href="#cb11-21"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb11-22"><a href="#cb11-22"></a>}</span>
+<span id="cb11-23"><a href="#cb11-23"></a></span>
+<span id="cb11-24"><a href="#cb11-24"></a><span class="co">/* large red text */</span></span>
+<span id="cb11-25"><a href="#cb11-25"></a><span class="fu">.important-text</span>{</span>
+<span id="cb11-26"><a href="#cb11-26"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb11-27"><a href="#cb11-27"></a>  <span class="kw">font-size</span>: <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb11-28"><a href="#cb11-28"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="body-text center-text">
+<p>Below, we <strong>(a)</strong> link our stylesheet <em>(line 5)</em>, and <strong>(b)</strong> use our class selectors to apply targeted styling <em>(lines 10 &amp; 12)</em>. These follow the general syntax:</p>
+<p><code>&lt;html-tag class="class-selector"&gt;Content&lt;/html-tag&gt;</code></p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="5 | 10-12"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a> <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"practice-styles-KEY.css"</span><span class="kw">&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="kw">&lt;body&gt;</span> </span>
+<span id="cb12-8"><a href="#cb12-8"></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>  <span class="kw">&lt;h1&gt;</span>Here is my level one header<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>  <span class="kw">&lt;p&gt;</span>Here is my second paragraph, where you can read more about NCEAS <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://www.nceas.ucsb.edu/roundtable"</span><span class="kw">&gt;</span>Roundtables<span class="kw">&lt;/a&gt;</span>.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"important-text"</span><span class="kw">&gt;</span>This is very important text!<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-4-3">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/apply-styles-to-html.png" style="width:65.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="apply-styles-to-md" class="slide level2" data-menu-title="Apply styles to qmd file"><h2></h2>
+<p><span class="slide-title-smaller">Applying a stylesheet to a <code>.qmd</code> file</span></p>
+<hr>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-5-1"><code>practice-styles.css</code></a></li>
+<li><a href="#tabset-5-2"><code>practice-markdown.qmd</code></a></li>
+<li><a href="#tabset-5-3">rendered output</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+
+</div>
+<div id="tabset-5-2">
+
+</div>
+<div id="tabset-5-3">
+
+</div>
+</div>
+</div>
 <div class="footer footer-default">
 
 </div>

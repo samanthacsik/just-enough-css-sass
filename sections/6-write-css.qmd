@@ -4,6 +4,106 @@ format: revealjs
 
 ##  {#write-css data-menu-title="Write CSS"}
 
-[Let's write some CSS selectors in `styles.css`]{.slide-title-smaller}
+[Practice writing element & class selectors]{.slide-title-smaller}
 
 <hr>
+
+::: {.body-text .center-text}
+Here, we apply our `practice-styles.css` stylesheet to `practice-html.html`.
+:::
+
+::: panel-tabset
+
+## `practice-styles.css`
+
+```{css}
+#| eval: false
+#| echo: true
+/* ------- element selectors ------- */
+
+/* style level one headers */
+h1 {
+  background-color: #49bf96;
+  border-radius: 25px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+/* purple italicized hyperlinks */
+a {
+  color: purple;
+  font-style: italic;
+}
+
+/* ------- class selectors ------- */
+
+/* blue text */
+.blue-text {
+  color: blue;
+}
+
+/* large red text */
+.important-text{
+  color: red;
+  font-size: 30px;
+}
+```
+
+## `practice-html.html`
+
+::: {.body-text .center-text}
+Below, we **(a)** link our stylesheet *(line 5)*, and **(b)** use our class selectors to apply targeted styling *(lines 10 & 12)*. These follow the general syntax:
+
+`<html-tag class="class-selector">Content</html-tag>`
+:::
+
+```{html}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5 | 10-12"
+<!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
+<html> <!-- This tag represents the root of the HTML doc -->
+<head>
+ <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
+ <link rel="stylesheet" href="practice-styles-KEY.css">
+</head>
+<body> 
+  <!-- Write all the contents of the HTML doc here -->
+  <h1>Here is my level one header</h1>
+  <p class="blue-text">Here is my first paragraph</p>
+  <p>Here is my second paragraph, where you can read more about NCEAS <a href="https://www.nceas.ucsb.edu/roundtable">Roundtables</a>.</p>
+  <p class="important-text">This is very important text!</p>
+</body>
+</html>
+```
+
+## rendered output
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "65%" 
+knitr::include_graphics("images/apply-styles-to-html.png")
+```
+
+:::
+
+---
+
+##  {#apply-styles-to-md data-menu-title="Apply styles to qmd file"}
+
+[Applying a stylesheet to a `.qmd` file]{.slide-title-smaller}
+
+<hr>
+
+::: panel-tabset
+
+## `practice-styles.css`
+
+## `practice-markdown.qmd`
+
+## rendered output
+:::
+
+

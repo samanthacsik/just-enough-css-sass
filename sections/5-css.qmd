@@ -192,7 +192,7 @@ knitr::include_graphics("images/grouping-selector.png")
 
 ##  {#class-selectors data-menu-title="Class Selectors"}
 
-[Target an element(s) using class attributes]{.slide-title-smaller}
+[Target an element(s) using class selectors]{.slide-title-smaller}
 
 <hr>
 
@@ -229,7 +229,6 @@ A class selector uses the *`class` attribute* of an HTML element to style that s
 ::: {.column width="50%"}
 
 <br>
-<br>
 
 ::: {.center-text}
 **Output**
@@ -248,13 +247,76 @@ knitr::include_graphics("images/class-selector.png")
 
 ::::
 
-::: {.body-text .important-text-bg .center-text}
-*If you're like me, you'll probably find yourself using class selectors most often!*
+---
+
+##  {#spans data-menu-title="Spans"}
+
+[Use `<span>` to target part of an element]{.slide-title-smaller}
+
+<hr>
+
+::: {.body-text}
+The HTML `<span>` tag is used to apply class selectors to *part* of an element.
 :::
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**CSS**
+
+```{css}
+#| eval: false
+#| echo: true
+.blue-italicized {
+  color: blue;
+  font-style: italic;
+}
+```
+
+**HTML**
+
+```{html}
+#| eval: false
+#| echo: true
+<p>Only the word <span class="blue-italicized">blue</span> is styled.</p>
+```
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+::: {.center-text}
+**Output**
+:::
+
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/span.png")
+```
+
+:::
+
+::::
 
 ---
 
 ##  {#conflicting-rules data-menu-title="Conflicting Rules"}
 
-[Conflicting CSS rules?]{.slide-title}
+[CSS rules can conflict -- the more specific rule "wins"]{.slide-title}
 
+<hr>
+
+It is common to have more than one CSS rule that points to the same element. As you build more complex stylesheets, determining which CSS rule "wins out" can get complicated. At a very basic level, the more specific CSS "wins". 
+
+In the context of today's talk, class selectors are more specific than element selectors and will take precedence. 
+
+EXAMPLE HERE
