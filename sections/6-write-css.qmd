@@ -101,9 +101,75 @@ knitr::include_graphics("images/apply-styles-to-html.png")
 
 ## `practice-styles.css`
 
+::: {.body-text}
+**Note** the required `/*-- scss:rules --*/` section header, which has been added at the top of the file
+:::
+
+```{css}
+#| eval: false
+#| echo: true
+/*-- scss:rules --*/
+
+/* ------- element selectors ------- */
+
+/* style level one headers */
+h1 {
+  background-color: #49bf96;
+  border-radius: 25px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+/* purple italicized hyperlinks */
+a {
+  color: purple;
+  font-style: italic;
+}
+
+/* ------- class selectors ------- */
+
+/* blue text */
+.blue-text {
+  color: blue;
+}
+
+/* large red text */
+.important-text{
+  color: red;
+  font-size: 30px;
+}
+```
+
 ## `practice-markdown.qmd`
 
+::: {.body-text}
+Below, we **(a)** call our stylesheet in the YAML metadata header using the `theme` option (line 2), and **(b)** use our class selectors to apply targeted styling (lines 7 & 11).
+:::
+
+```{.md}
+---
+theme: practice-styles.css
+---
+
+# Here is my level one header
+
+<p class="blue-text">Here is my first paragraph</p>
+
+Here is my second paragraph, where you can read more about NCEAS [Roundtables](https://www.nceas.ucsb.edu/roundtable).
+
+<p class="important-text">This is very important text!</p>
+```
+
 ## rendered output
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "65%" 
+knitr::include_graphics("images/apply-styles-to-qmd.png")
+```
+
 :::
 
 

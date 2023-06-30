@@ -978,7 +978,9 @@
 </section><section id="conflicting-rules" class="slide level2" data-menu-title="Conflicting Rules"><h2></h2>
 <p><span class="slide-title">CSS rules can conflict – the more specific rule “wins”</span></p>
 <hr>
-<p>It is common to have more than one CSS rule that points to the same element. As you build more complex stylesheets, determining which CSS rule “wins out” can get complicated. For intro CSS purposes, the more specific rule takes precedence.</p>
+<p>It is common to have more than one CSS rule that points to the same element. As you build more complex stylesheets, determining which CSS rule “wins out” can get complicated. At a very basic level, the more specific CSS “wins”.</p>
+<p>In the context of today’s talk, class selectors are more specific than element selectors and will take precedence.</p>
+<p>EXAMPLE HERE</p>
 </section><section id="write-css" class="slide level2" data-menu-title="Write CSS"><h2></h2>
 <p><span class="slide-title-smaller">Practice writing element &amp; class selectors</span></p>
 <hr>
@@ -1069,13 +1071,67 @@
 </ul>
 <div class="tab-content">
 <div id="tabset-5-1">
-
+<div class="body-text">
+<p><strong>Note</strong> the required <code>/*-- scss:rules --*/</code> section header, which has been added at the top of the file</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="co">/* ------- element selectors ------- */</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="co">/* style level one headers */</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a>h1 {</span>
+<span id="cb13-7"><a href="#cb13-7"></a>  <span class="kw">background-color</span>: <span class="cn">#49bf96</span><span class="op">;</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a>  <span class="kw">border-radius</span>: <span class="dv">25</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a>}</span>
+<span id="cb13-12"><a href="#cb13-12"></a></span>
+<span id="cb13-13"><a href="#cb13-13"></a><span class="co">/* purple italicized hyperlinks */</span></span>
+<span id="cb13-14"><a href="#cb13-14"></a>a {</span>
+<span id="cb13-15"><a href="#cb13-15"></a>  <span class="kw">color</span>: <span class="cn">purple</span><span class="op">;</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb13-17"><a href="#cb13-17"></a>}</span>
+<span id="cb13-18"><a href="#cb13-18"></a></span>
+<span id="cb13-19"><a href="#cb13-19"></a><span class="co">/* ------- class selectors ------- */</span></span>
+<span id="cb13-20"><a href="#cb13-20"></a></span>
+<span id="cb13-21"><a href="#cb13-21"></a><span class="co">/* blue text */</span></span>
+<span id="cb13-22"><a href="#cb13-22"></a><span class="fu">.blue-text</span> {</span>
+<span id="cb13-23"><a href="#cb13-23"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb13-24"><a href="#cb13-24"></a>}</span>
+<span id="cb13-25"><a href="#cb13-25"></a></span>
+<span id="cb13-26"><a href="#cb13-26"></a><span class="co">/* large red text */</span></span>
+<span id="cb13-27"><a href="#cb13-27"></a><span class="fu">.important-text</span>{</span>
+<span id="cb13-28"><a href="#cb13-28"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb13-29"><a href="#cb13-29"></a>  <span class="kw">font-size</span>: <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb13-30"><a href="#cb13-30"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div id="tabset-5-2">
-
+<div class="body-text">
+<p>Below, we <strong>(a)</strong> call our stylesheet in the YAML metadata header using the <code>theme</code> option (line 2), and <strong>(b)</strong> use our class selectors to apply targeted styling (lines 7 &amp; 11).</p>
+</div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="an">theme:</span><span class="co"> practice-styles.css</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="co">---</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="fu"># Here is my level one header</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a></span>
+<span id="cb14-9"><a href="#cb14-9"></a>Here is my second paragraph, where you can read more about NCEAS <span class="co">[</span><span class="ot">Roundtables</span><span class="co">](https://www.nceas.ucsb.edu/roundtable)</span>.</span>
+<span id="cb14-10"><a href="#cb14-10"></a></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"important-text"</span><span class="kw">&gt;</span>This is very important text!<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-5-3">
-
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/apply-styles-to-qmd.png" style="width:65.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
