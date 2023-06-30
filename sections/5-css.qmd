@@ -97,6 +97,8 @@ h1 {
 }
 ```
 
+<br>
+
 **HTML**
 
 ```{html}
@@ -151,6 +153,8 @@ h1, h2, p {
   color: purple;
 }
 ```
+
+<br>
 
 **HTML**
 
@@ -215,6 +219,8 @@ A class selector uses the *`class` attribute* of an HTML element to style that s
 }
 ```
 
+<br>
+
 **HTML**
 
 ```{html}
@@ -276,6 +282,8 @@ The HTML `<span>` tag is used to apply class selectors to *part* of an element.
 }
 ```
 
+<br>
+
 **HTML**
 
 ```{html}
@@ -311,12 +319,65 @@ knitr::include_graphics("images/span.png")
 
 ##  {#conflicting-rules data-menu-title="Conflicting Rules"}
 
-[CSS rules can conflict -- the more specific rule "wins"]{.slide-title}
+[Conflicting rules? The more specific rule wins]{.slide-title-smallest}
 
 <hr>
 
-It is common to have more than one CSS rule that points to the same element. As you build more complex stylesheets, determining which CSS rule "wins out" can get complicated. At a very basic level, the more specific CSS "wins". 
+::: {.body-text}
+It is common to have more than one CSS rule that points to the same element. As you build more complex stylesheets, determining which CSS rule "wins out" can get complicated. At a very basic level, the more specific CSS "wins". In the context of today's talk, **class selectors are more specific than element selectors** and will take precedence. 
+:::
 
-In the context of today's talk, class selectors are more specific than element selectors and will take precedence. 
+:::: {.columns}
 
-EXAMPLE HERE
+::: {.column width="50%"}
+
+**CSS**
+
+```{css}
+#| eval: false
+#| echo: true
+h1 {
+  color: blue; 
+  font-style: italic; 
+}
+
+.orange-text {
+  color: orange;
+}
+```
+
+<br>
+
+**HTML**
+
+```{html}
+#| eval: false
+#| echo: true
+<h1>This level one header will be blue</h1>
+<h1 class="orange-text">This one will be orange</h1>
+```
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+<br>
+
+::: {.center-text}
+**Output**
+:::
+
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/specificity.png")
+```
+
+:::
+
+::::
+
