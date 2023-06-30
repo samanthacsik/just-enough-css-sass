@@ -2,3 +2,40 @@
 format: revealjs
 ---
 
+##  {#sassy data-menu-title="Get Sassy"}
+
+[Now it's time to get a little {{< fa brands sass >}}y]{.slide-title}
+
+<hr>
+<br>
+
+::: {columns}
+
+::: {.column width="50%"}
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "70%" 
+knitr::include_graphics("images/sass.png")
+```
+
+::: {.center-text}
+**S**yntactically **A**wesome **S**tyle**s**heets
+:::
+:::
+
+::: {.column width="50%"}
+
+<br>
+<br>
+
+::: {.body-text}
+- Sass is a **CSS extension** (provides additional features, like variables)
+- Sass is a **CSS preprocesser** (converts Sass code into standard CSS because browsers can't interpret Sass)
+:::
+:::
+
+:::
+---
+
