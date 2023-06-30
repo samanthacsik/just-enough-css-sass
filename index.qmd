@@ -86,4 +86,8 @@ Slides & source code available on [{{< fa brands github title = "GitHub icon" >}
 
 {{< include sections/5-css.qmd >}}
 
+---
+
+{{< include sections/6-write-css.qmd >}}
+
 
