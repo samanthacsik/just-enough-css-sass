@@ -160,6 +160,24 @@ Here is my second paragraph, where you can read more about NCEAS [Roundtables](h
 <p class="important-text">This is very important text!</p>
 ```
 
+::: {.body-text}
+**Note:** Quarto also provides [its own syntax](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans) for applying classes to elements. For example:
+:::
+
+```{.md}
+---
+theme: practice-styles.css
+---
+
+# Here is my level one header
+
+[Here is my first paragraph]{.blue-text}
+
+Here is my second paragraph, where you can read more about NCEAS [Roundtables](https://www.nceas.ucsb.edu/roundtable).
+
+[This is very important text!]{.important-text}
+```
+
 ## rendered output
 
 ```{r}
