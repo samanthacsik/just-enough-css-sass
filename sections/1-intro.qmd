@@ -4,7 +4,7 @@ format: revealjs
 
 ## {#do-you-use-the-web data-menu-title="Do you use the web?"}
 
-[{{< fa hand title="An open hand" >}} Hands up if you spend time on the web!]{.slide-title}
+[{{< fa hand title="An open hand" >}} Hands up if you spend time on the web!]{.slide-title-smaller}
 
 <hr>
 
@@ -25,7 +25,7 @@ format: revealjs
 . . . 
 
 ::: {.center-text}
-*Aside from surfing the web, I really didn't know anything about the latter two points until just a couple years ago.*
+*Until just a couple years ago, I really didn't know anything about what goes into making a web page look the way it does...knowing even just a tiny bit now feels **powerful** and **magical** and **fun***.
 :::
 
 ---
@@ -58,39 +58,21 @@ knitr::include_graphics("images/teaching.jpeg")
 
 ---
 
-## {#3-things data-menu-title="3 things"}
+##  {#www data-menu-title="Web pages"}
 
-[{{< fa circle-exclamation >}} Keep in mind {{< fa circle-exclamation >}} we need three things to style web pages: ]{.slide-title}
+[What even is a web page? {{< fa window-maximize >}} ]{.slide-title}
 
 <hr>
 
-. . . 
-
-{{< fa brands html5 >}} HTML element(s)
-
-::: {.body-text}
-These can be written in a number of file formats, including `.html`, `.md`, `.rmd`, and `.qmd` files
-:::
-
 <br>
 
-. . . 
-
-{{< fa brands css3-alt >}} CSS rules
-
-::: {.body-text}
-CSS can be written in a number of different places, but saving them to an external stylesheet is often preferred (e.g. `.css`, `.scss` files)
-:::
-
-<br>
-
-. . .
-
-{{< fa paintbrush >}} {{< fa palette >}} apply those CSS rules to your HTML elements
-
-::: {.body-text}
-Link a stylesheet to the file where you're HTML lives & apply styling as necessary
-:::
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+knitr::include_graphics("images/www.png")
+```
 
 
 

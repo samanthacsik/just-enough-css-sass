@@ -139,3 +139,40 @@ CSS styling
 :::
 
 ::::
+
+---
+
+## {#3-things data-menu-title="3 things"}
+
+[{{< fa circle-exclamation >}} Keep in mind {{< fa circle-exclamation >}} we need three things to style web pages: ]{.slide-title}
+
+<hr>
+
+. . . 
+
+{{< fa brands html5 >}} HTML element(s)
+
+::: {.body-text}
+These can be written in a number of file formats, including `.html`, `.md`, `.rmd`, and `.qmd` files
+:::
+
+<br>
+
+. . . 
+
+{{< fa brands css3-alt >}} CSS rules
+
+::: {.body-text}
+CSS can be written in a number of different places, but saving them to an external stylesheet is often preferred (e.g. `.css`, `.scss` files)
+:::
+
+<br>
+
+. . .
+
+{{< fa paintbrush >}} {{< fa palette >}} apply those CSS rules to your HTML elements
+
+::: {.body-text}
+Link a stylesheet to the file where you're HTML lives & apply styling as necessary
+:::
+
