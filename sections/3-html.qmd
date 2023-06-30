@@ -4,7 +4,7 @@ format: revealjs
 
 ##  {#light-intro-html data-menu-title="Light intro to HTML"}
 
-[A *light* introduction to HTML `r fontawesome::fa("html5", fill = "#FFFFFF", a11y = "sem")`]{.slide-title}
+[A *light* introduction to HTML {{< fa brands html5 >}} ]{.slide-title}
 
 <hr>
 
