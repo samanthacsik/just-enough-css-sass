@@ -1,0 +1,80 @@
+---
+format: revealjs
+---
+
+## {#cute-animals data-menu-title="Cute animals report"}
+
+[We have a very important report in need to some styling]{.slide-title-smaller}
+
+<hr>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/report.png")
+```
+
+::: {.body-text .center-text}
+Open & render [`cuteness-report.qmd`](https://github.com/samanthacsik/cute-cats-dogs/blob/main/report/cuteness-report.qmd) by clicking the **Render** button in RStudio
+:::
+
+---
+
+##  {#scss-setup data-menu-title=".scss setup"}
+
+[Create/setup a `.scss` file & link in `.qmd` YAML ]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+1. Create a .scss file in the root directory of your website’s repo using the `touch` command in the RStudio terminal:
+
+```{css}
+#| eval: false
+#| echo: true
+touch practice-styles.scss 
+```
+:::
+
+. . . 
+
+::: {.body-text}
+2. Add the `/*-- scss:defaults --*/` and `/*-- scss:rules --*/` page dividers to `practice-styles.scss` (required by Quarto): 
+
+```{css}
+#| eval: false
+#| echo: true
+/*-- scss:defaults --*/
+
+// Sass variables will go here
+
+/*-- scss:rules --*/
+
+// CSS rules will go here
+
+```
+:::
+
+. . . 
+
+::: {.body-text}
+3. If you haven't already, link `practice-styles.scss` to your `practice-markdown.qmd` file using the `theme` option in the YAML:
+
+```{.md}
+---
+theme: practice-styles.scss
+---
+
+# Here is my level one header
+
+<p class="blue-text">Here is my first paragraph</p>
+
+Here is my second paragraph, where you can read more about NCEAS [Roundtables](https://www.nceas.ucsb.edu/roundtable).
+
+<p class="important-text">This is <span class="blue-text">very</span> important text!</p>
+```
+
+:::
+---

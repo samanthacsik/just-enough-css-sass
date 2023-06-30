@@ -163,7 +163,7 @@ These can be written in a number of file formats, including `.html`, `.md`, `.rm
 {{< fa brands css3-alt >}} CSS rules
 
 ::: {.body-text}
-CSS can be written in a number of different places, but saving them to an external stylesheet is often preferred (e.g. `.css`, `.scss` files)
+CSS can be written in a number of different places, but saving them to an external stylesheet is often preferred (e.g. `.css`, `.scss`, `.sass` files)
 :::
 
 <br>

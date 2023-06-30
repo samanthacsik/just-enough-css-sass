@@ -578,7 +578,7 @@
 <div class="fragment">
 <p><i class="fa-brands fa-css3-alt" aria-label="css3-alt"></i> CSS rules</p>
 <div class="body-text">
-<p>CSS can be written in a number of different places, but saving them to an external stylesheet is often preferred (e.g.&nbsp;<code>.css</code>, <code>.scss</code> files)</p>
+<p>CSS can be written in a number of different places, but saving them to an external stylesheet is often preferred (e.g.&nbsp;<code>.css</code>, <code>.scss</code>, <code>.sass</code> files)</p>
 </div>
 <p><br></p>
 </div>
@@ -1247,6 +1247,118 @@
 <li>Sass is a <strong>CSS preprocesser</strong> (converts Sass code into standard CSS because browsers can’t interpret Sass)</li>
 </ul>
 </div>
+</div>
+</div>
+</section><section id="why-sass" class="slide level2" data-menu-title="Why Sass"><h2></h2>
+<p><span class="slide-title">Sass helps to reduce repetition</span></p>
+<hr>
+<div class="body-text">
+<p>Sass extends existing CSS features in a number of exciting ways, but importantly <strong>reduces repetition</strong>. For example, let’s say you’re working on a website/web page that uses three main colors:</p>
+</div>
+<p><br></p>
+
+<img data-src="images/sass-colors.png" class="r-stretch quarto-figure-center"><p><br></p>
+<div class="body-text">
+<p>You might imagine how often you’ll need to type those HEX codes out as you developing your stylesheet…it can get annoying rather quickly.</p>
+</div>
+</section><section id="reduce-rep" class="slide level2" data-menu-title="Reduce repetition"><h2></h2>
+<p><span class="slide-title">Sass helps to reduce repetition</span></p>
+<hr>
+<div class="body-text">
+<p>Sass allows us to <strong>define variables</strong> (in the form <code>$var-name: value;</code>) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet <strong>more readable and easier to update</strong> (only need to change HEX codes in one spot, not multiple!)</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1"></a><span class="co">/* define Sass vars */</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a></span>
+<span id="cb18-3"><a href="#cb18-3"></a>$green<span class="in">: #348553;</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a>$yellow<span class="in">: #E9A300</span>;</span>
+<span id="cb18-5"><a href="#cb18-5"></a>$red<span class="in">: #A23601</span>;</span>
+<span id="cb18-6"><a href="#cb18-6"></a></span>
+<span id="cb18-7"><a href="#cb18-7"></a><span class="co">/* use vars in CSS rules */</span></span>
+<span id="cb18-8"><a href="#cb18-8"></a></span>
+<span id="cb18-9"><a href="#cb18-9"></a>h1 {</span>
+<span id="cb18-10"><a href="#cb18-10"></a>  font-color: $green<span class="op">;</span></span>
+<span id="cb18-11"><a href="#cb18-11"></a>}</span>
+<span id="cb18-12"><a href="#cb18-12"></a></span>
+<span id="cb18-13"><a href="#cb18-13"></a><span class="fu">.button-styling</span> {</span>
+<span id="cb18-14"><a href="#cb18-14"></a>  <span class="kw">background</span>: $yellow<span class="op">;</span></span>
+<span id="cb18-15"><a href="#cb18-15"></a>  <span class="kw">color</span>: $red<span class="op">;</span> </span>
+<span id="cb18-16"><a href="#cb18-16"></a>  <span class="kw">border-color</span>: $green<span class="op">;</span></span>
+<span id="cb18-17"><a href="#cb18-17"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="body-text">
+<p><strong>Note:</strong> Sass has two syntaxes – SCSS syntax (<code>.scss</code>), shown above, is the most common. It stands for <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tyle<strong>s</strong>heets <i class="fa-solid fa-smile" aria-label="smile"></i></p>
+</div>
+</section><section id="using-scss-files" class="slide level2" data-menu-title="Using .scss files"><h2></h2>
+<p><span class="slide-title">Quarto automatically compiles Sass</span></p>
+<hr>
+<div class="body-text">
+<p><strong>Recall:</strong> Web browsers can interpret CSS ( <i class="fa-solid fa-check" aria-label="check"></i> <code>.css</code>) but <em>not</em> Sass ( <i class="fa-solid fa-xmark" aria-label="xmark"></i> <code>.scss</code> or <code>.sass</code>). Typically, you’ll need to <strong>compile (aka convert) Sass to CSS</strong>, then link the resulting <code>.css</code> file in your HTML.</p>
+</div>
+<div class="fragment">
+<div class="body-text">
+<p>Lucky for us, <strong>Quarto compiles the contents of a <code>.scss</code> file into CSS without any extra steps</strong> – you may link a <code>.scss</code> file in the YAML of your <code>.qmd</code> file. For example:</p>
+</div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1"></a><span class="co">---</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="an">theme:</span><span class="co"> practice-styles.scss</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p><br></p>
+<div class="center-text">
+<p>From here on out, we’ll be writing our Sass variables and CSS rules in a <code>.scss</code> file, which we’ll use to style our a fun/silly sample report.</p>
+</div>
+</div>
+</section><section id="cute-animals" class="slide level2" data-menu-title="Cute animals report"><h2></h2>
+<p><span class="slide-title-smaller">We have a very important report in need to some styling</span></p>
+<hr>
+
+<img data-src="images/report.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="body-text center-text">
+<p>Open &amp; render <a href="https://github.com/samanthacsik/cute-cats-dogs/blob/main/report/cuteness-report.qmd"><code>cuteness-report.qmd</code></a> by clicking the <strong>Render</strong> button in RStudio</p>
+</div>
+</section><section id="scss-setup" class="slide level2" data-menu-title=".scss setup"><h2></h2>
+<p><span class="slide-title">Create/setup a <code>.scss</code> file &amp; link in <code>.qmd</code> YAML</span></p>
+<hr>
+<div class="body-text">
+<ol type="1">
+<li>Create a .scss file in the root directory of your website’s repo using the <code>touch</code> command in the RStudio terminal:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb20-1"><a href="#cb20-1"></a>touch practice-styles<span class="fu">.scss</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<div class="body-text">
+<ol start="2" type="1">
+<li>Add the <code>/*-- scss:defaults --*/</code> and <code>/*-- scss:rules --*/</code> page dividers to <code>practice-styles.scss</code> (required by Quarto):</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb21-1"><a href="#cb21-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a></span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="er">// Sass variables will go here</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a></span>
+<span id="cb21-5"><a href="#cb21-5"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a></span>
+<span id="cb21-7"><a href="#cb21-7"></a><span class="er">// CSS rules will go here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="body-text">
+<ol start="3" type="1">
+<li>If you haven’t already, link <code>practice-styles.scss</code> to your <code>practice-markdown.qmd</code> file using the <code>theme</code> option in the YAML:</li>
+</ol>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1"></a><span class="co">---</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="an">theme:</span><span class="co"> practice-styles.scss</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="co">---</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a></span>
+<span id="cb22-5"><a href="#cb22-5"></a><span class="fu"># Here is my level one header</span></span>
+<span id="cb22-6"><a href="#cb22-6"></a></span>
+<span id="cb22-7"><a href="#cb22-7"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb22-8"><a href="#cb22-8"></a></span>
+<span id="cb22-9"><a href="#cb22-9"></a>Here is my second paragraph, where you can read more about NCEAS <span class="co">[</span><span class="ot">Roundtables</span><span class="co">](https://www.nceas.ucsb.edu/roundtable)</span>.</span>
+<span id="cb22-10"><a href="#cb22-10"></a></span>
+<span id="cb22-11"><a href="#cb22-11"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"important-text"</span><span class="kw">&gt;</span>This is <span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>very<span class="kw">&lt;/span&gt;</span> important text!<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section><section class="slide level2"><div class="footer footer-default">

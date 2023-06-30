@@ -94,4 +94,7 @@ Slides & source code available on [{{< fa brands github title = "GitHub icon" >}
 
 {{< include sections/7-sass.qmd >}}
 
+---
+
+{{< include sections/8-write-sass.qmd >}}
 

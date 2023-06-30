@@ -37,5 +37,103 @@ knitr::include_graphics("images/sass.png")
 :::
 
 :::
+
 ---
+
+##  {#why-sass data-menu-title="Why Sass"}
+
+[Sass helps to reduce repetition]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+Sass extends existing CSS features in a number of exciting ways, but importantly **reduces repetition**. For example, let's say you're working on a website/web page that uses three main colors:
+:::
+
+<br>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "70%%" 
+knitr::include_graphics("images/sass-colors.png")
+```
+
+<br>
+
+::: {.body-text}
+You might imagine how often you’ll need to type those HEX codes out as you developing your stylesheet…it can get annoying rather quickly.
+:::
+
+---
+
+##  {#reduce-rep data-menu-title="Reduce repetition"}
+
+[Sass helps to reduce repetition]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+Sass allows us to **define variables** (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet **more readable and easier to update** (only need to change HEX codes in one spot, not multiple!)
+:::
+
+```{css}
+#| eval: false
+#| echo: true
+/* define Sass vars */
+
+$green: #348553;
+$yellow: #E9A300;
+$red: #A23601;
+
+/* use vars in CSS rules */
+
+h1 {
+  font-color: $green;
+}
+
+.button-styling {
+  background: $yellow;
+  color: $red; 
+  border-color: $green;
+}
+```
+
+::: {.body-text}
+**Note:** Sass has two syntaxes -- SCSS syntax (`.scss`), shown above, is the most common. It stands for **S**assy **C**ascading **S**tyle**s**heets {{< fa smile >}}
+:::
+
+---
+
+##  {#using-scss-files data-menu-title="Using .scss files"}
+
+[Quarto automatically compiles Sass]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+**Recall:** Web browsers can interpret CSS ( {{< fa check >}} `.css`) but *not* Sass ( {{< fa xmark >}} `.scss` or `.sass`). Typically, you'll need to **compile (aka convert) Sass to CSS**, then link the resulting `.css` file in your HTML.
+:::
+
+. . . 
+
+::: {.body-text}
+Lucky for us, **Quarto compiles the contents of a `.scss` file into CSS without any extra steps** -- you may link a `.scss` file in the YAML of your `.qmd` file. For example:
+:::
+
+```{.md}
+---
+theme: practice-styles.scss
+---
+```
+
+. . .
+
+<br>
+
+::: {.center-text}
+From here on out, we'll be writing our Sass variables and CSS rules in a `.scss` file, which we'll use to style our a fun/silly sample report.
+:::
+
 
