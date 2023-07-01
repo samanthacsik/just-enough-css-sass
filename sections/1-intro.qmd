@@ -60,18 +60,16 @@ knitr::include_graphics("images/teaching.jpeg")
 
 ##  {#www data-menu-title="Web pages"}
 
-[What even is a web page? {{< fa window-maximize >}} ]{.slide-title}
+[So what's a web page made up of?]{.slide-title}
 
 <hr>
-
-<br>
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "85%" 
-knitr::include_graphics("images/www.png")
+#| out-width: "100%" 
+knitr::include_graphics("images/webpage.png")
 ```
 
 
