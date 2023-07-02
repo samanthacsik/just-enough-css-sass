@@ -41,7 +41,7 @@ touch practice-styles.scss
 . . . 
 
 ::: {.body-text}
-2. Add the `/*-- scss:defaults --*/` and `/*-- scss:rules --*/` page dividers to `cuteness-report.scss` (required by Quarto): 
+2. Add the `/*-- scss:defaults --*/` and `/*-- scss:rules --*/` page dividers to `cuteness-report.scss` ([required by Quarto](https://quarto.org/docs/output-formats/html-themes-more.html)): 
 :::
 
 ```{css}
@@ -79,7 +79,8 @@ format:
   html:
     toc: true
     toc-location: left
-    theme: my-report-styles.scss
+    theme: 
+      - my-report-styles.scss
     
 execute: 
   eval: true

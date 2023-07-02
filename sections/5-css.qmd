@@ -63,7 +63,7 @@ knitr::include_graphics("images/css-syntax.png")
 . . . 
 
 ::: {.body-text}
-**We're going to focus on *element* and *class* selectors**, but check out [these slides](https://ucsb-meds.github.io/customizing-quarto-websites/#/selector-types) for an overview of other simple selectors. [W3 Schools](https://www.w3schools.com/css/css_selectors.asp) is also an excellent resource (for more than just CSS!) if you're looking to do a deeper dive.
+**We're going to focus on *element* and *class* selectors**, but check out [these slides](https://ucsb-meds.github.io/customizing-quarto-websites/#/selector-types) for an overview of other simple selectors. [W3 Schools](https://www.w3schools.com/css/default.asp) is also an excellent resource for learning about [CSS selectors](https://www.w3schools.com/css/css_selectors.asp), exploring the many [CSS properties](https://www.w3schools.com/cssref/index.php), and much much more (I use this all the time!).
 :::
 
 ---
