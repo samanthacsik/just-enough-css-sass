@@ -1261,10 +1261,10 @@
 <p>You might imagine how often you’ll need to type those HEX codes out as you developing your stylesheet…it can get annoying rather quickly.</p>
 </div>
 </section><section id="reduce-rep" class="slide level2" data-menu-title="Reduce repetition"><h2></h2>
-<p><span class="slide-title">Sass helps to reduce repetition</span></p>
+<p><span class="slide-title-smaller">Define Sass variables to reduce repetition</span></p>
 <hr>
 <div class="body-text">
-<p>Sass allows us to <strong>define variables</strong> (in the form <code>$var-name: value;</code>) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet <strong>more readable and easier to update</strong> (only need to change HEX codes in one spot, not multiple!)</p>
+<p>Sass allows us to <strong>define variables</strong> (in the form <code>$var-name: value;</code>) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet <strong>more readable and easier to update</strong> (e.g.&nbsp;only need to change HEX codes in one spot, not multiple!)</p>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1"></a><span class="co">/* define Sass vars */</span></span>
@@ -1305,7 +1305,7 @@
 <div class="fragment">
 <p><br></p>
 <div class="center-text">
-<p>From here on out, we’ll be writing our Sass variables and CSS rules in a <code>.scss</code> file, which we’ll use to style our a fun/silly sample report.</p>
+<p>From here on out, we’ll be writing our Sass variables and CSS rules in a <code>.scss</code> file, which we’ll use to style our fun/silly sample report.</p>
 </div>
 </div>
 </section><section id="cute-animals" class="slide level2" data-menu-title="Cute animals report"><h2></h2>
@@ -1315,22 +1315,23 @@
 <img data-src="images/report.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="body-text center-text">
 <p>Open &amp; render <a href="https://github.com/samanthacsik/cute-cats-dogs/blob/main/report/cuteness-report.qmd"><code>cuteness-report.qmd</code></a> by clicking the <strong>Render</strong> button in RStudio</p>
 </div>
-</section><section id="scss-setup" class="slide level2" data-menu-title=".scss setup"><h2></h2>
-<p><span class="slide-title">Create/setup a <code>.scss</code> file &amp; link in <code>.qmd</code> YAML</span></p>
+</section><section id="create-scss" class="slide level2" data-menu-title="Create .scss"><h2></h2>
+<p><span class="slide-title-smaller">Create a <code>.scss</code> file</span></p>
 <hr>
 <div class="body-text">
 <ol type="1">
-<li>Create a .scss file in the root directory of your website’s repo using the <code>touch</code> command in the RStudio terminal:</li>
+<li>Create a <code>.scss</code> file in the <code>report/</code> folder – you can do this using the <code>touch</code> command in the RStudio terminal (You may need to first <code>cd</code> (change directory) into this folder using the terminal, or manually move your <code>.scss</code> into the <code>report/</code> folder after creating it):</li>
 </ol>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb20-1"><a href="#cb20-1"></a>touch practice-styles<span class="fu">.scss</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 <div class="fragment">
 <div class="body-text">
 <ol start="2" type="1">
-<li>Add the <code>/*-- scss:defaults --*/</code> and <code>/*-- scss:rules --*/</code> page dividers to <code>practice-styles.scss</code> (required by Quarto):</li>
+<li>Add the <code>/*-- scss:defaults --*/</code> and <code>/*-- scss:rules --*/</code> page dividers to <code>cuteness-report.scss</code> (required by Quarto):</li>
 </ol>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb21-1"><a href="#cb21-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
 <span id="cb21-2"><a href="#cb21-2"></a></span>
@@ -1341,25 +1342,30 @@
 <span id="cb21-7"><a href="#cb21-7"></a><span class="er">// CSS rules will go here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-<div class="fragment">
+</section><section id="link-scss" class="slide level2" data-menu-title="Link .scss to .qmd"><h2></h2>
+<p><span class="slide-title-smaller">Apply your <code>.scss</code> stylesheet to your <code>.qmd</code></span></p>
+<hr>
 <div class="body-text">
-<ol start="3" type="1">
-<li>If you haven’t already, link <code>practice-styles.scss</code> to your <code>practice-markdown.qmd</code> file using the <code>theme</code> option in the YAML:</li>
-</ol>
+<p>Link <code>my-report-styles.scss</code> to your <code>cuteness-report.qmd</code> file using the <code>theme</code> option in the YAML (see line 11):</p>
+</div>
 <div class="sourceCode" id="cb22"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1"></a><span class="co">---</span></span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="an">theme:</span><span class="co"> practice-styles.scss</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a><span class="co">---</span></span>
-<span id="cb22-4"><a href="#cb22-4"></a></span>
-<span id="cb22-5"><a href="#cb22-5"></a><span class="fu"># Here is my level one header</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="an">title:</span><span class="co"> "Are dogs or cats cuter?"</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="an">subtitle:</span><span class="co"> "A very important report"</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a><span class="an">author:</span><span class="co"> "Sam Csik"</span></span>
+<span id="cb22-5"><a href="#cb22-5"></a><span class="an">date:</span><span class="co"> "August 3, 2023"</span></span>
 <span id="cb22-6"><a href="#cb22-6"></a></span>
-<span id="cb22-7"><a href="#cb22-7"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb22-8"><a href="#cb22-8"></a></span>
-<span id="cb22-9"><a href="#cb22-9"></a>Here is my second paragraph, where you can read more about NCEAS <span class="co">[</span><span class="ot">Roundtables</span><span class="co">](https://www.nceas.ucsb.edu/roundtable)</span>.</span>
-<span id="cb22-10"><a href="#cb22-10"></a></span>
-<span id="cb22-11"><a href="#cb22-11"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"important-text"</span><span class="kw">&gt;</span>This is <span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>very<span class="kw">&lt;/span&gt;</span> important text!<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
+<span id="cb22-7"><a href="#cb22-7"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb22-8"><a href="#cb22-8"></a><span class="co">  html:</span></span>
+<span id="cb22-9"><a href="#cb22-9"></a><span class="co">    toc: true</span></span>
+<span id="cb22-10"><a href="#cb22-10"></a><span class="co">    toc-location: left</span></span>
+<span id="cb22-11"><a href="#cb22-11"></a><span class="co">    theme: my-report-styles.scss</span></span>
+<span id="cb22-12"><a href="#cb22-12"></a><span class="co">    </span></span>
+<span id="cb22-13"><a href="#cb22-13"></a><span class="an">execute:</span><span class="co"> </span></span>
+<span id="cb22-14"><a href="#cb22-14"></a><span class="co">  eval: true</span></span>
+<span id="cb22-15"><a href="#cb22-15"></a><span class="co">  echo: false</span></span>
+<span id="cb22-16"><a href="#cb22-16"></a><span class="co">  message: false</span></span>
+<span id="cb22-17"><a href="#cb22-17"></a><span class="co">  warning: false</span></span>
+<span id="cb22-18"><a href="#cb22-18"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section><section class="slide level2"><div class="footer footer-default">
 
 </div>

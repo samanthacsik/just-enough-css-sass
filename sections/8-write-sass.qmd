@@ -22,26 +22,27 @@ Open & render [`cuteness-report.qmd`](https://github.com/samanthacsik/cute-cats-
 
 ---
 
-##  {#scss-setup data-menu-title=".scss setup"}
+##  {#create-scss data-menu-title="Create .scss"}
 
-[Create/setup a `.scss` file & link in `.qmd` YAML ]{.slide-title}
+[Create a `.scss` file]{.slide-title-smaller}
 
 <hr>
 
 ::: {.body-text}
-1. Create a .scss file in the root directory of your website’s repo using the `touch` command in the RStudio terminal:
+1. Create a `.scss` file in the `report/` folder -- you can do this using the `touch` command in the RStudio terminal (You may need to first `cd` (change directory) into this folder using the terminal, or manually move your `.scss` into the `report/` folder after creating it):
+:::
 
 ```{css}
 #| eval: false
 #| echo: true
 touch practice-styles.scss 
 ```
-:::
 
 . . . 
 
 ::: {.body-text}
-2. Add the `/*-- scss:defaults --*/` and `/*-- scss:rules --*/` page dividers to `practice-styles.scss` (required by Quarto): 
+2. Add the `/*-- scss:defaults --*/` and `/*-- scss:rules --*/` page dividers to `cuteness-report.scss` (required by Quarto): 
+:::
 
 ```{css}
 #| eval: false
@@ -53,28 +54,39 @@ touch practice-styles.scss
 /*-- scss:rules --*/
 
 // CSS rules will go here
-
 ```
-:::
 
-. . . 
+---
+
+##  {#link-scss data-menu-title="Link .scss to .qmd"}
+
+[Apply your `.scss` stylesheet to your `.qmd`]{.slide-title-smaller}
+
+<hr>
 
 ::: {.body-text}
-3. If you haven't already, link `practice-styles.scss` to your `practice-markdown.qmd` file using the `theme` option in the YAML:
+Link `my-report-styles.scss` to your `cuteness-report.qmd` file using the `theme` option in the YAML (see line 11):
+:::
 
 ```{.md}
 ---
-theme: practice-styles.scss
+title: "Are dogs or cats cuter?"
+subtitle: "A very important report"
+author: "Sam Csik"
+date: "August 3, 2023"
+
+format: 
+  html:
+    toc: true
+    toc-location: left
+    theme: my-report-styles.scss
+    
+execute: 
+  eval: true
+  echo: false
+  message: false
+  warning: false
 ---
-
-# Here is my level one header
-
-<p class="blue-text">Here is my first paragraph</p>
-
-Here is my second paragraph, where you can read more about NCEAS [Roundtables](https://www.nceas.ucsb.edu/roundtable).
-
-<p class="important-text">This is <span class="blue-text">very</span> important text!</p>
 ```
 
-:::
 ---

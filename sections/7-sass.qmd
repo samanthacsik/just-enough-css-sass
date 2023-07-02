@@ -70,12 +70,12 @@ You might imagine how often you’ll need to type those HEX codes out as you dev
 
 ##  {#reduce-rep data-menu-title="Reduce repetition"}
 
-[Sass helps to reduce repetition]{.slide-title}
+[Define Sass variables to reduce repetition]{.slide-title-smaller}
 
 <hr>
 
 ::: {.body-text}
-Sass allows us to **define variables** (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet **more readable and easier to update** (only need to change HEX codes in one spot, not multiple!)
+Sass allows us to **define variables** (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet **more readable and easier to update** (e.g. only need to change HEX codes in one spot, not multiple!)
 :::
 
 ```{css}
@@ -133,7 +133,7 @@ theme: practice-styles.scss
 <br>
 
 ::: {.center-text}
-From here on out, we'll be writing our Sass variables and CSS rules in a `.scss` file, which we'll use to style our a fun/silly sample report.
+From here on out, we'll be writing our Sass variables and CSS rules in a `.scss` file, which we'll use to style our fun/silly sample report.
 :::
 
 
