@@ -157,6 +157,12 @@ td {
   color: $gray;
 }
 
+// styled image caption text (smaller)
+.smaller-caption-text { 
+  font-size: 20px;
+  color: $gray;
+}
+
 // add extra space above text
  .topbr {
     display: block;

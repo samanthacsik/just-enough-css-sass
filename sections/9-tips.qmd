@@ -1,0 +1,43 @@
+---
+format: revealjs
+---
+
+##  {#challenging data-menu-title="Styling webpages is challenging"}
+
+[Styling webpages can be challenging. Here are some tips!]{.slide-title-smallest}
+
+<hr>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%" 
+knitr::include_graphics("images/dont-know.gif")
+```
+
+::: {.smaller-caption-text .center-text}
+^ I feel this way often when trying to write CSS
+:::
+:::
+
+::: {.column width="50%"}
+::: {.body-text}
+…and honestly, it's **a lot** of it is trial and error. Inspecting your website can take patience and persistence to figure out how exactly to target your desired element. Some things that have helped me:
+
+::: incremental
+- re-rendering often to ensure your Sass/CSS is working as expected
+- Google! (lots of queries that look like, "CSS underline text", "CSS rounded corners", etc.)
+- [W3 Schools](https://www.w3schools.com/css/default.asp) -- seriously such a valuable resource (especially their interactive tutorials)
+- drawing inspiration (and borrowing source code) from other webpages
+:::
+:::
+:::
+
+::::
+
+

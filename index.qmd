@@ -98,3 +98,38 @@ Slides & source code available on [{{< fa brands github title = "GitHub icon" >}
 
 {{< include sections/8-write-sass.qmd >}}
 
+---
+
+{{< include sections/9-tips.qmd >}}
+
+---
+
+## {#TheEnd data-menu-title="End Slide"}
+
+::: {.center-text}
+[Happy styling!]{.slide-title}
+:::
+
+<hr>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "80%" 
+knitr::include_graphics("images/bob-ross.gif")
+```
+
+::: {.center-text}
+
+::: {.large-body-text}
+This is a Quarto Presentation. To learn more, visit <https://quarto.org>.
+:::
+
+::: {.body-text}
+*If you see mistakes or want to suggest changes, please create an [issue](https://github.com/samanthacsik/just-enough-css-sass/issues) on the source repository.*
+:::
+
+:::
+
+

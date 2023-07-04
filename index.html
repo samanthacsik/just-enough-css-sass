@@ -841,15 +841,6 @@
 <!-- :::: {.columns} -->
 <!-- ::: {.column width="50%"} -->
 
-<!-- ::: -->
-<!-- ::: {.column width="50%"} -->
-<!-- ::: {.body-text} -->
-<!--  **Selectors** select the HTML element(s) you want to style *(e.g. level one headings, `<h1>`)* -->
-<!--  **Declarations** sit inside curly brackets, `{}`, and are made up of **property** and **value** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*= -->
-<!--  A property and its corresponding value are separated by a colon, `:`. Declarations end with a semicolon, `;` -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- :::: -->
 <img data-src="images/css-syntax.png" style="width:85.0%" class="r-stretch quarto-figure-center"><p><br></p>
 <div class="fragment">
 <div class="body-text">
@@ -1556,9 +1547,351 @@
 <span id="cb26-26"><a href="#cb26-26"></a>$code-color<span class="in">: $light-green</span>; </span>
 <span id="cb26-27"><a href="#cb26-27"></a>$code-bg<span class="in">: $white</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="apply-colors-fonts" class="slide level2" data-menu-title="Apply colors &amp; fonts"><h2></h2>
-<p><span class="slide-title">Checking in – any questions?</span></p>
+</section><section id="rerender" class="slide level2" data-menu-title="Re-render report"><h2></h2>
+<p><span class="slide-title-smallest">Re-render to check out your new styling</span></p>
 <hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/without-sass-styling.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="smaller-caption-text center-text">
+<p>Without <code>my-report-styles.scss</code> applied</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/with-sass-styling.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="smaller-caption-text center-text">
+<p>With <code>my-report-styles.scss</code> applied</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="large-body-text center-text">
+<p><strong>Next up:</strong> fine-tuning with some CSS</p>
+</div>
+</div>
+</section><section id="inspect" class="slide level2" data-menu-title="Inspecting is helpful"><h2></h2>
+<p><span class="slide-title-smallest">“Inspect”ing reveals how CSS is used to target HTML elements</span></p>
+<hr>
+<div class="body-text">
+<p>Temporarily “edit” CSS selectors (refreshing your browser will revert your page back to its original state) – helps to identify exactly which elements different selectors are manipulating <em>and</em> allows you to try out styles before actually hard-coding them.</p>
+</div>
+
+<img data-src="images/inspect.gif" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="define-element-selectors" class="slide level2" data-menu-title="Define element selectors"><h2></h2>
+<p><span class="slide-title-smallest">Start with element selectors (at least, I like to)</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="body-text">
+<p>The following CSS rules apply styling to level 2 &amp; 3 headers (inspecting the page helped me test these out first!):</p>
+<ul>
+<li>
+<strong>Level 2 headers (<code>&lt;h2&gt;</code>/<code>##</code>):</strong>
+<ul>
+<li>colored green</li>
+<li>section underlined in yellow</li>
+<li>serif font (Arvo)</li>
+</ul>
+</li>
+<li>
+<strong>Level 3 headers (<code>&lt;h3&gt;</code>/<code>###</code>):</strong>
+<ul>
+<li>colored green</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="body-text important-text-bg">
+<p><strong>Note:</strong> we’re now writing our rules beneath the <code>/*--- scss:rules ---*/</code> region decorator.</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="29-41"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb27-1"><a href="#cb27-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a></span>
+<span id="cb27-3"><a href="#cb27-3"></a><span class="er">// import fonts from fonts.google.com </span></span>
+<span id="cb27-4"><a href="#cb27-4"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Arvo&amp;family=Nunito:wght@400;800&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb27-5"><a href="#cb27-5"></a></span>
+<span id="cb27-6"><a href="#cb27-6"></a><span class="er">// colors</span></span>
+<span id="cb27-7"><a href="#cb27-7"></a>$green<span class="in">: #348553;</span></span>
+<span id="cb27-8"><a href="#cb27-8"></a>$light-green<span class="in">: #589244; </span></span>
+<span id="cb27-9"><a href="#cb27-9"></a>$yellow<span class="in">: #E9A300</span>;</span>
+<span id="cb27-10"><a href="#cb27-10"></a>$red<span class="in">: #A23601</span>;</span>
+<span id="cb27-11"><a href="#cb27-11"></a>$white<span class="in">: #FFFFFF</span>;</span>
+<span id="cb27-12"><a href="#cb27-12"></a>$gray<span class="in">: #ADADAD</span>;</span>
+<span id="cb27-13"><a href="#cb27-13"></a>$black<span class="in">: #525452; </span></span>
+<span id="cb27-14"><a href="#cb27-14"></a></span>
+<span id="cb27-15"><a href="#cb27-15"></a><span class="er">// font styles</span></span>
+<span id="cb27-16"><a href="#cb27-16"></a>$font-family-sans-serif<span class="in">: 'Nunito</span>'<span class="op">,</span> sans-serif;</span>
+<span id="cb27-17"><a href="#cb27-17"></a>$font-family-serif<span class="in">: 'Arvo</span>'<span class="op">,</span> serif; </span>
+<span id="cb27-18"><a href="#cb27-18"></a></span>
+<span id="cb27-19"><a href="#cb27-19"></a><span class="er">// find all Quarto Sass vars here: https://quarto.org/docs/output-formats/html-themes.html#sass-variables</span></span>
+<span id="cb27-20"><a href="#cb27-20"></a>$font-size-root<span class="in">: 1.2em; </span></span>
+<span id="cb27-21"><a href="#cb27-21"></a>$body-color<span class="in">: $black</span>;</span>
+<span id="cb27-22"><a href="#cb27-22"></a>$link-color<span class="in">: $red</span>; </span>
+<span id="cb27-23"><a href="#cb27-23"></a>$toc-color<span class="in">: $green</span>; </span>
+<span id="cb27-24"><a href="#cb27-24"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
+<span id="cb27-25"><a href="#cb27-25"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
+<span id="cb27-26"><a href="#cb27-26"></a>$code-color<span class="in">: $light-green</span>; </span>
+<span id="cb27-27"><a href="#cb27-27"></a>$code-bg<span class="in">: $white</span>;</span>
+<span id="cb27-28"><a href="#cb27-28"></a></span>
+<span id="cb27-29"><a href="#cb27-29"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb27-30"><a href="#cb27-30"></a></span>
+<span id="cb27-31"><a href="#cb27-31"></a><span class="er">// level two styling</span></span>
+<span id="cb27-32"><a href="#cb27-32"></a>h2 { </span>
+<span id="cb27-33"><a href="#cb27-33"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb27-34"><a href="#cb27-34"></a>  <span class="kw">border-bottom</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> $yellow<span class="op">;</span></span>
+<span id="cb27-35"><a href="#cb27-35"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
+<span id="cb27-36"><a href="#cb27-36"></a>}</span>
+<span id="cb27-37"><a href="#cb27-37"></a></span>
+<span id="cb27-38"><a href="#cb27-38"></a><span class="er">// level three stying</span></span>
+<span id="cb27-39"><a href="#cb27-39"></a>h3 {</span>
+<span id="cb27-40"><a href="#cb27-40"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb27-41"><a href="#cb27-41"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section><section id="modify-existing-classes" class="slide level2" data-menu-title="Modifying existing classes"><h2></h2>
+<p><span class="slide-title">Modify existing class selectors</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="body-text">
+<p>Inspecting reveals the existing class selectors (already defined by the Quarto framework), <code>.title</code> and <code>.lead</code>, which are used to target the document title and subtitle, respectively. We can modify what these do by including them in our stylesheet. I’ll make the following updates:</p>
+<ul>
+<li>
+<strong>Document title (targeted with <code>.title</code> class):</strong>
+<ul>
+<li>colored green</li>
+<li>serif font (Arvo)</li>
+<li>increase font size</li>
+</ul>
+</li>
+<li>
+<strong>Document subtitle (targeted with <code>.lead</code> class):</strong>
+<ul>
+<li>increase font size</li>
+</ul>
+</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="42-53"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb28-1"><a href="#cb28-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a></span>
+<span id="cb28-3"><a href="#cb28-3"></a><span class="er">// import fonts from fonts.google.com </span></span>
+<span id="cb28-4"><a href="#cb28-4"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Arvo&amp;family=Nunito:wght@400;800&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb28-5"><a href="#cb28-5"></a></span>
+<span id="cb28-6"><a href="#cb28-6"></a><span class="er">// colors</span></span>
+<span id="cb28-7"><a href="#cb28-7"></a>$green<span class="in">: #348553;</span></span>
+<span id="cb28-8"><a href="#cb28-8"></a>$light-green<span class="in">: #589244; </span></span>
+<span id="cb28-9"><a href="#cb28-9"></a>$yellow<span class="in">: #E9A300</span>;</span>
+<span id="cb28-10"><a href="#cb28-10"></a>$red<span class="in">: #A23601</span>;</span>
+<span id="cb28-11"><a href="#cb28-11"></a>$white<span class="in">: #FFFFFF</span>;</span>
+<span id="cb28-12"><a href="#cb28-12"></a>$gray<span class="in">: #ADADAD</span>;</span>
+<span id="cb28-13"><a href="#cb28-13"></a>$black<span class="in">: #525452; </span></span>
+<span id="cb28-14"><a href="#cb28-14"></a></span>
+<span id="cb28-15"><a href="#cb28-15"></a><span class="er">// font styles</span></span>
+<span id="cb28-16"><a href="#cb28-16"></a>$font-family-sans-serif<span class="in">: 'Nunito</span>'<span class="op">,</span> sans-serif;</span>
+<span id="cb28-17"><a href="#cb28-17"></a>$font-family-serif<span class="in">: 'Arvo</span>'<span class="op">,</span> serif; </span>
+<span id="cb28-18"><a href="#cb28-18"></a></span>
+<span id="cb28-19"><a href="#cb28-19"></a><span class="er">// find all Quarto Sass vars here: https://quarto.org/docs/output-formats/html-themes.html#sass-variables</span></span>
+<span id="cb28-20"><a href="#cb28-20"></a>$font-size-root<span class="in">: 1.2em; </span></span>
+<span id="cb28-21"><a href="#cb28-21"></a>$body-color<span class="in">: $black</span>;</span>
+<span id="cb28-22"><a href="#cb28-22"></a>$link-color<span class="in">: $red</span>; </span>
+<span id="cb28-23"><a href="#cb28-23"></a>$toc-color<span class="in">: $green</span>; </span>
+<span id="cb28-24"><a href="#cb28-24"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
+<span id="cb28-25"><a href="#cb28-25"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
+<span id="cb28-26"><a href="#cb28-26"></a>$code-color<span class="in">: $light-green</span>; </span>
+<span id="cb28-27"><a href="#cb28-27"></a>$code-bg<span class="in">: $white</span>;</span>
+<span id="cb28-28"><a href="#cb28-28"></a></span>
+<span id="cb28-29"><a href="#cb28-29"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb28-30"><a href="#cb28-30"></a></span>
+<span id="cb28-31"><a href="#cb28-31"></a><span class="er">// level two styling</span></span>
+<span id="cb28-32"><a href="#cb28-32"></a>h2 { </span>
+<span id="cb28-33"><a href="#cb28-33"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb28-34"><a href="#cb28-34"></a>  <span class="kw">border-bottom</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> $yellow<span class="op">;</span></span>
+<span id="cb28-35"><a href="#cb28-35"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
+<span id="cb28-36"><a href="#cb28-36"></a>}</span>
+<span id="cb28-37"><a href="#cb28-37"></a></span>
+<span id="cb28-38"><a href="#cb28-38"></a><span class="er">// level three stying</span></span>
+<span id="cb28-39"><a href="#cb28-39"></a>h3 {</span>
+<span id="cb28-40"><a href="#cb28-40"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb28-41"><a href="#cb28-41"></a>}</span>
+<span id="cb28-42"><a href="#cb28-42"></a></span>
+<span id="cb28-43"><a href="#cb28-43"></a><span class="er">// style document title </span></span>
+<span id="cb28-44"><a href="#cb28-44"></a><span class="fu">.title</span> {</span>
+<span id="cb28-45"><a href="#cb28-45"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb28-46"><a href="#cb28-46"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
+<span id="cb28-47"><a href="#cb28-47"></a>  <span class="kw">font-size</span>: <span class="dv">2.3</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb28-48"><a href="#cb28-48"></a>}</span>
+<span id="cb28-49"><a href="#cb28-49"></a></span>
+<span id="cb28-50"><a href="#cb28-50"></a><span class="er">// adjust size of documment subtitle</span></span>
+<span id="cb28-51"><a href="#cb28-51"></a><span class="fu">.lead</span> {</span>
+<span id="cb28-52"><a href="#cb28-52"></a>  <span class="kw">font-size</span>: <span class="dv">1.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb28-53"><a href="#cb28-53"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section><section id="create-new-classes" class="slide level2" data-menu-title="Create new class selectors"><h2></h2>
+<p><span class="slide-title">Create &amp; apply new class selectors</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="body-text">
+<p>Let’s say we want to better highlight the very last sentence of our report, which links out to our GitHub repo &amp; provides instructions for contributing:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/boring-text.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can create &amp; apply three new classes that:</p>
+<ul>
+<li>increase the size of the text (<code>.large-text</code>)</li>
+<li>center the text (<code>.center-text</code>)</li>
+<li>color/style the background of our text to make it stand out (<code>.highlight-text</code>)</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="55-72"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb29-1"><a href="#cb29-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a></span>
+<span id="cb29-3"><a href="#cb29-3"></a><span class="er">// import fonts from fonts.google.com </span></span>
+<span id="cb29-4"><a href="#cb29-4"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Arvo&amp;family=Nunito:wght@400;800&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb29-5"><a href="#cb29-5"></a></span>
+<span id="cb29-6"><a href="#cb29-6"></a><span class="er">// colors</span></span>
+<span id="cb29-7"><a href="#cb29-7"></a>$green<span class="in">: #348553;</span></span>
+<span id="cb29-8"><a href="#cb29-8"></a>$light-green<span class="in">: #589244; </span></span>
+<span id="cb29-9"><a href="#cb29-9"></a>$yellow<span class="in">: #E9A300</span>;</span>
+<span id="cb29-10"><a href="#cb29-10"></a>$red<span class="in">: #A23601</span>;</span>
+<span id="cb29-11"><a href="#cb29-11"></a>$white<span class="in">: #FFFFFF</span>;</span>
+<span id="cb29-12"><a href="#cb29-12"></a>$gray<span class="in">: #ADADAD</span>;</span>
+<span id="cb29-13"><a href="#cb29-13"></a>$black<span class="in">: #525452; </span></span>
+<span id="cb29-14"><a href="#cb29-14"></a></span>
+<span id="cb29-15"><a href="#cb29-15"></a><span class="er">// font styles</span></span>
+<span id="cb29-16"><a href="#cb29-16"></a>$font-family-sans-serif<span class="in">: 'Nunito</span>'<span class="op">,</span> sans-serif;</span>
+<span id="cb29-17"><a href="#cb29-17"></a>$font-family-serif<span class="in">: 'Arvo</span>'<span class="op">,</span> serif; </span>
+<span id="cb29-18"><a href="#cb29-18"></a></span>
+<span id="cb29-19"><a href="#cb29-19"></a><span class="er">// find all Quarto Sass vars here: https://quarto.org/docs/output-formats/html-themes.html#sass-variables</span></span>
+<span id="cb29-20"><a href="#cb29-20"></a>$font-size-root<span class="in">: 1.2em; </span></span>
+<span id="cb29-21"><a href="#cb29-21"></a>$body-color<span class="in">: $black</span>;</span>
+<span id="cb29-22"><a href="#cb29-22"></a>$link-color<span class="in">: $red</span>; </span>
+<span id="cb29-23"><a href="#cb29-23"></a>$toc-color<span class="in">: $green</span>; </span>
+<span id="cb29-24"><a href="#cb29-24"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
+<span id="cb29-25"><a href="#cb29-25"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
+<span id="cb29-26"><a href="#cb29-26"></a>$code-color<span class="in">: $light-green</span>; </span>
+<span id="cb29-27"><a href="#cb29-27"></a>$code-bg<span class="in">: $white</span>;</span>
+<span id="cb29-28"><a href="#cb29-28"></a></span>
+<span id="cb29-29"><a href="#cb29-29"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb29-30"><a href="#cb29-30"></a></span>
+<span id="cb29-31"><a href="#cb29-31"></a><span class="er">// level two styling</span></span>
+<span id="cb29-32"><a href="#cb29-32"></a>h2 { </span>
+<span id="cb29-33"><a href="#cb29-33"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb29-34"><a href="#cb29-34"></a>  <span class="kw">border-bottom</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> $yellow<span class="op">;</span></span>
+<span id="cb29-35"><a href="#cb29-35"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
+<span id="cb29-36"><a href="#cb29-36"></a>}</span>
+<span id="cb29-37"><a href="#cb29-37"></a></span>
+<span id="cb29-38"><a href="#cb29-38"></a><span class="er">// level three stying</span></span>
+<span id="cb29-39"><a href="#cb29-39"></a>h3 {</span>
+<span id="cb29-40"><a href="#cb29-40"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb29-41"><a href="#cb29-41"></a>}</span>
+<span id="cb29-42"><a href="#cb29-42"></a></span>
+<span id="cb29-43"><a href="#cb29-43"></a><span class="er">// style document title </span></span>
+<span id="cb29-44"><a href="#cb29-44"></a><span class="fu">.title</span> {</span>
+<span id="cb29-45"><a href="#cb29-45"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb29-46"><a href="#cb29-46"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
+<span id="cb29-47"><a href="#cb29-47"></a>  <span class="kw">font-size</span>: <span class="dv">2.3</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb29-48"><a href="#cb29-48"></a>}</span>
+<span id="cb29-49"><a href="#cb29-49"></a></span>
+<span id="cb29-50"><a href="#cb29-50"></a><span class="er">// adjust size of documment subtitle</span></span>
+<span id="cb29-51"><a href="#cb29-51"></a><span class="fu">.lead</span> {</span>
+<span id="cb29-52"><a href="#cb29-52"></a>  <span class="kw">font-size</span>: <span class="dv">1.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb29-53"><a href="#cb29-53"></a>}</span>
+<span id="cb29-54"><a href="#cb29-54"></a></span>
+<span id="cb29-55"><a href="#cb29-55"></a><span class="er">// center text</span></span>
+<span id="cb29-56"><a href="#cb29-56"></a><span class="fu">.center-text</span> { </span>
+<span id="cb29-57"><a href="#cb29-57"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb29-58"><a href="#cb29-58"></a>}</span>
+<span id="cb29-59"><a href="#cb29-59"></a></span>
+<span id="cb29-60"><a href="#cb29-60"></a><span class="fu">.large-text</span> {</span>
+<span id="cb29-61"><a href="#cb29-61"></a>  <span class="kw">font-size</span>: <span class="dv">1.4</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb29-62"><a href="#cb29-62"></a>}</span>
+<span id="cb29-63"><a href="#cb29-63"></a></span>
+<span id="cb29-64"><a href="#cb29-64"></a><span class="er">// yellow highlight</span></span>
+<span id="cb29-65"><a href="#cb29-65"></a><span class="fu">.highlight-text</span> {</span>
+<span id="cb29-66"><a href="#cb29-66"></a>  <span class="kw">background-color</span>: <span class="fu">rgba(</span><span class="dv">233</span><span class="op">,</span> <span class="dv">163</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.2</span><span class="fu">)</span><span class="op">;</span> </span>
+<span id="cb29-67"><a href="#cb29-67"></a>  <span class="kw">padding-top</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
+<span id="cb29-68"><a href="#cb29-68"></a>  <span class="kw">padding-bottom</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
+<span id="cb29-69"><a href="#cb29-69"></a>  <span class="kw">padding-right</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
+<span id="cb29-70"><a href="#cb29-70"></a>  <span class="kw">padding-left</span>: <span class="dv">8</span><span class="dt">px</span><span class="op">;</span> </span>
+<span id="cb29-71"><a href="#cb29-71"></a>  <span class="kw">border-radius</span>: <span class="dv">25</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb29-72"><a href="#cb29-72"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section><section id="final-styling" class="slide level2" data-menu-title="Final styled doc"><h2></h2>
+<p><span class="slide-title">Check out your final styled document!</span></p>
+<hr>
+
+<img data-src="images/final-report.gif" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="challenging" class="slide level2" data-menu-title="Styling webpages is challenging"><h2></h2>
+<p><span class="slide-title-smallest">Styling webpages can be challenging. Here are some tips!</span></p>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/dont-know.gif" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="smaller-caption-text center-text">
+<p>^ I feel this way often when trying to write CSS</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="body-text">
+<p>…and honestly, it’s <strong>a lot</strong> of it is trial and error. Inspecting your website can take patience and persistence to figure out how exactly to target your desired element. Some things that have helped me:</p>
+<div>
+<ul>
+<li class="fragment">re-rendering often to ensure your Sass/CSS is working as expected</li>
+<li class="fragment">Google! (lots of queries that look like, “CSS underline text”, “CSS rounded corners”, etc.)</li>
+<li class="fragment">
+<a href="https://www.w3schools.com/css/default.asp">W3 Schools</a> – seriously such a valuable resource (especially their interactive tutorials)</li>
+<li class="fragment">drawing inspiration (and borrowing source code) from other webpages</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section><section id="TheEnd" class="slide level2" data-menu-title="End Slide"><h2></h2>
+<div class="center-text">
+<p><span class="slide-title">Happy styling!</span></p>
+</div>
+<hr>
+
+<img data-src="images/bob-ross.gif" style="width:80.0%" class="r-stretch quarto-figure-center"><div class="center-text">
+<div class="large-body-text">
+<p>This is a Quarto Presentation. To learn more, visit <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+</div>
+<div class="body-text">
+<p><em>If you see mistakes or want to suggest changes, please create an <a href="https://github.com/samanthacsik/just-enough-css-sass/issues">issue</a> on the source repository.</em></p>
+</div>
+</div>
 <div class="footer footer-default">
 
 </div>

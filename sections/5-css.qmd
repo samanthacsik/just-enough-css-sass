@@ -42,22 +42,6 @@ CSS is a rule-based language -- it allows you to **define groups of styles that 
 knitr::include_graphics("images/css-syntax.png")
 ```
 
-<!-- ::: -->
-
-<!-- ::: {.column width="50%"} -->
-
-<!-- ::: {.body-text} -->
-
-<!-- {{< fa angle-right >}} **Selectors** select the HTML element(s) you want to style *(e.g. level one headings, `<h1>`)* -->
-
-<!-- {{< fa angle-right >}} **Declarations** sit inside curly brackets, `{}`, and are made up of **property** and **value** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*= -->
-
-<!-- {{< fa angle-right >}} A property and its corresponding value are separated by a colon, `:`. Declarations end with a semicolon, `;` -->
-
-<!-- ::: -->
-<!-- ::: -->
-
-<!-- :::: -->
 <br>
 
 . . . 
