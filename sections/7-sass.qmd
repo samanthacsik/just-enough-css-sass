@@ -63,7 +63,7 @@ knitr::include_graphics("images/sass-colors.png")
 <br>
 
 ::: {.body-text}
-You might imagine how often you’ll need to type those HEX codes out as you developing your stylesheet…it can get annoying rather quickly.
+You might imagine how often you’ll need to type those HEX codes out as you develop your stylesheet…it can get annoying rather quickly.
 :::
 
 ---

@@ -27,7 +27,7 @@ knitr::include_graphics("images/dont-know.gif")
 
 ::: {.column width="50%"}
 ::: {.body-text}
-…and honestly, it's **a lot** of it is trial and error. Inspecting your website can take patience and persistence to figure out how exactly to target your desired element. Some things that have helped me:
+For me, it's **a lot** of it is trial and error. Inspecting your website can take patience and persistence to figure out how exactly to target your desired element. Some things that have helped me:
 
 ::: incremental
 - re-rendering often to ensure your Sass/CSS is working as expected
