@@ -41,7 +41,7 @@ touch practice-styles.scss
 . . . 
 
 ::: {.body-text}
-2. Add the `/*-- scss:defaults --*/` and `/*-- scss:rules --*/` page dividers to `cuteness-report.scss` ([required by Quarto](https://quarto.org/docs/output-formats/html-themes-more.html)): 
+2. Add the `/*-- scss:defaults --*/` and `/*-- scss:rules --*/` region decorators to `cuteness-report.scss` ([required by Quarto](https://quarto.org/docs/output-formats/html-themes-more.html)): 
 :::
 
 ```{css}
@@ -65,7 +65,7 @@ touch practice-styles.scss
 <hr>
 
 ::: {.body-text}
-Link `my-report-styles.scss` to your `cuteness-report.qmd` file using the `theme` option in the YAML (see line 11):
+Link `my-report-styles.scss` to your `cuteness-report.qmd` file using the `theme` option in the YAML (see lines 11-12):
 :::
 
 ```{.md}
@@ -91,3 +91,237 @@ execute:
 ```
 
 ---
+
+##  {#color-vars data-menu-title="Define Sass vars for colors"}
+
+[Define some color variables]{.slide-title-smaller}
+
+<hr>
+
+::: {.body-text}
+Because this is NCEAS-funded research (jk jk, but let's pretend), we'll be using NCEAS colors to style our report. Define any colors you plan to use throughout your stylesheet using the syntax, `$colorName: HEXcode;`
+:::
+
+```{css}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "3-10"
+/*-- scss:defaults --*/
+
+// colors
+$green: #348553;
+$light-green: #589244; 
+$yellow: #E9A300;
+$red: #A23601;
+$white: #FFFFFF;
+$gray: #ADADAD;
+$black: #525452; 
+
+/*-- scss:rules --*/
+
+// CSS rules will go here
+```
+
+<br>
+
+::: {.body-text .important-text-bg}
+**Note:** You won't see new styling on your report just yet! We've defined some Sass variables here, but haven't yet applied them.
+:::
+
+---
+
+##  {#import-fonts-1 data-menu-title="Import Google fonts (1/2)"}
+
+[Import Google fonts (1/2)]{.slide-title-smaller}
+
+<hr>
+
+::: {.body-text .center-text}
+Start by exploring fonts at <https://fonts.google.com/>. Once you found a one (or more) that you like: 
+:::
+
+::: incremental
+::: {.body-text}
+1. Select which weights and styles to import from the **Styles** section -- click the **+** button, <img src="images/gf+.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;"/>, to the right of the style you want.
+
+2. Click on **View selected families**, <img src="images/view-fonts.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;"/> (top right corner), to see all of your selected fonts. Under the **Use on the web** section, select the radio button for **@import** and copy everything between the `<style> </style>` tags (starting with `@import` and ending with `;`) to your clipboard.
+:::
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "50%" 
+knitr::include_graphics("images/google-fonts.gif")
+```
+
+---
+
+##  {#import-fonts-2 data-menu-title="Import Google fonts (2/2)"}
+
+[Import & define Google font variables (2/2)]{.slide-title-smaller}
+
+<hr>
+
+::: {.body-text}
+3. Paste your import code into `my-report-styles.scss`, beneath `/*-- scss:defaults --*/`
+:::
+
+```{css}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "3-4"
+/*-- scss:defaults --*/
+
+// import fonts from fonts.google.com
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Nunito:wght@400;800&display=swap');
+
+// colors
+$green: #348553;
+$light-green: #589244; 
+$yellow: #E9A300;
+$red: #A23601;
+$white: #FFFFFF;
+$gray: #ADADAD;
+$black: #525452; 
+```
+
+::: {.body-text}
+Here, we import two font families:
+
+- [Arvo](https://fonts.google.com/specimen/Arvo?query=arvo), in Regular 400, a [serif font](https://fonts.google.com/knowledge/glossary/serif) that we'll use for headers
+- [Nunito](https://fonts.google.com/specimen/Nunito?query=nunito), in Regular 400 and ExtraBold 800, a [sans-serif font](https://fonts.google.com/knowledge/glossary/sans_serif) that we'll use for everything else!
+
+::: {.important-text-bg .center-text}
+**Note:** You *must* import a higher font weight (e.g. 800) if you wish to **bold** text.
+:::
+:::
+
+---
+
+##  {#apply-colors-fonts data-menu-title="Apply colors & fonts"}
+
+[Checking in -- any questions?]{.slide-title}
+
+<hr>
+<br>
+
+. . . 
+
+::: {.center-text}
+Ok, now let's *use* our colors & fonts
+:::
+
+. . . 
+
+<br>
+
+::: {.body-text}
+::: {.center-text}
+We can do this in **two different ways** (spoiler, we'll be using both!):
+:::
+
+::: incremental
+1. [**Specifying [Quarto's Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables)**]{.yellow-underline} -- this is a super fast and easy way to make larger-scale changes to your theme
+2. [**Writing CSS rules**]{.yellow-underline}, just like we practiced earlier -- this is great for making fine-tuned adjustments
+:::
+:::
+
+---
+
+##  {#specify-fonts-vars data-menu-title="Specify font variables"}
+
+[Specify font variables]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+Define font style Sass variables, beneath `/*-- scss:defaults --*/`, using the syntax below:
+:::
+
+```{css}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "15-17"
+/*-- scss:defaults --*/
+
+// import fonts from fonts.google.com 
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Nunito:wght@400;800&display=swap');
+
+// colors
+$green: #348553;
+$light-green: #589244; 
+$yellow: #E9A300;
+$red: #A23601;
+$white: #FFFFFF;
+$gray: #ADADAD;
+$black: #525452; 
+
+// font styles
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-serif: 'Arvo', serif; 
+```
+
+<br>
+
+::: {.important-text-bg .body-text}
+**Note:** `$font-family-sans-serif` will automatically be applied across your Quarto document.
+:::
+
+---
+
+##  {#additional-sass-vars data-menu-title="Additional Sass variables"}
+
+[Specify additional variables]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+**Note:** All specified Sass variables could alternatively be written using CSS. *However*, this approach is quick, easy to write, and importantly, *easy to read*.
+:::
+
+```{css}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "19-27"
+/*-- scss:defaults --*/
+
+// import fonts from fonts.google.com 
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Nunito:wght@400;800&display=swap');
+
+// colors
+$green: #348553;
+$light-green: #589244; 
+$yellow: #E9A300;
+$red: #A23601;
+$white: #FFFFFF;
+$gray: #ADADAD;
+$black: #525452; 
+
+// font styles
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-serif: 'Arvo', serif; 
+
+// find all Quarto Sass vars here: https://quarto.org/docs/output-formats/html-themes.html#sass-variables
+$font-size-root: 1.2em; 
+$body-color: $black;
+$link-color: $red; 
+$toc-color: $green; 
+$toc-active-border: $yellow; 
+$toc-inactive-border: $gray; 
+$code-color: $light-green; 
+$code-bg: $white;
+```
+
+---
+
+##  {#apply-colors-fonts data-menu-title="Apply colors & fonts"}
+
+[Checking in -- any questions?]{.slide-title}
+
+<hr>
+
+
+
+

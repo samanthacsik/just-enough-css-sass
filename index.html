@@ -436,27 +436,36 @@
 </li>
 </ol>
 </div>
-</section><section id="do-you-use-the-web" class="slide level2" data-menu-title="Do you use the web?"><h2></h2>
-<p><span class="slide-title-smaller"><i class="fa-solid fa-hand" title="An open hand" aria-label="hand"></i> Hands up if you spend time on the web!</span></p>
+</section><section id="hello" class="slide level2" data-menu-title="Hi, I'm Sam"><h2></h2>
+<p><span class="slide-title-smaller"><i class="fa-solid fa-hand" title="An open hand" aria-label="hand"></i> Hello!</span></p>
 <hr>
-<p><br></p>
-<div class="fragment">
-<p><i class="fa-solid fa-hand" title="An open hand" aria-label="hand"></i> Keep ’em up if you’re generally familiar with what’s “under the hood” of any given web page</p>
-<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/sam-cropped.jpg" style="width:100.0%"></p>
+</figure>
 </div>
-<div class="fragment">
-<p><i class="fa-solid fa-hand" title="An open hand" aria-label="hand"></i> Who’s spent time developing and styling web pages?</p>
-<p><br></p>
 </div>
-<div class="fragment">
-<div class="center-text">
-<p><em>Until just a couple years ago, I really didn’t know anything about what goes into making a web page look the way it does…knowing even just a tiny bit now feels <strong>powerful</strong> and <strong>magical</strong> and <strong>fun</strong></em>.</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div>
+<div class="large-body-text">
+<ul>
+<li class="fragment">I’m Sam Csik (pronounced “chick”)</li>
+<li class="fragment">I’m obsessed with my two cats and dog (hang tight, this is relevant)</li>
+<li class="fragment">I’m the NCEAS/MEDS Data Training Coordinator</li>
+<li class="fragment">I’m a data science educator and primarily an R user</li>
+<li class="fragment">I’m <em>not</em> a web developer</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </section><section id="meds-websites" class="slide level2" data-menu-title="MEDS websites"><h2></h2>
 <p><span class="slide-title">Teaching in <a href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science/academics-meds">MEDS</a> motivated me to learn more about web page styling</span></p>
 <hr>
-<p><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
@@ -466,12 +475,19 @@
 </div>
 </div><div class="column" style="width:50%;">
 <div>
+<div class="large-body-text">
 <ul>
 <li class="fragment"><a href="https://ucsb-meds.github.io/creating-quarto-websites/">Creating your personal website using Quarto</a></li>
 <li class="fragment"><a href="https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide">Customizing Quarto websites: Make your website stand out using Sass &amp; CSS</a></li>
 <li class="fragment"><a href="https://ucsb-meds.github.io/EDS430-Shiny/#/title-slide">EDS 430: Intro to Shiny</a></li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="body-text center-text">
+<p><em>Until just a couple years ago, I really didn’t know anything about what goes into making a web page look the way it does…knowing even just a tiny bit now feels <strong>powerful</strong> and <strong>magical</strong> and <strong>fun</strong>.</em></p>
 </div>
 </div>
 </section><section id="www" class="slide level2" data-menu-title="Web pages"><h2></h2>
@@ -1329,7 +1345,7 @@
 <div class="fragment">
 <div class="body-text">
 <ol start="2" type="1">
-<li>Add the <code>/*-- scss:defaults --*/</code> and <code>/*-- scss:rules --*/</code> page dividers to <code>cuteness-report.scss</code> (<a href="https://quarto.org/docs/output-formats/html-themes-more.html">required by Quarto</a>):</li>
+<li>Add the <code>/*-- scss:defaults --*/</code> and <code>/*-- scss:rules --*/</code> region decorators to <code>cuteness-report.scss</code> (<a href="https://quarto.org/docs/output-formats/html-themes-more.html">required by Quarto</a>):</li>
 </ol>
 </div>
 <div class="cell">
@@ -1346,7 +1362,7 @@
 <p><span class="slide-title-smaller">Apply your <code>.scss</code> stylesheet to your <code>.qmd</code></span></p>
 <hr>
 <div class="body-text">
-<p>Link <code>my-report-styles.scss</code> to your <code>cuteness-report.qmd</code> file using the <code>theme</code> option in the YAML (see line 11):</p>
+<p>Link <code>my-report-styles.scss</code> to your <code>cuteness-report.qmd</code> file using the <code>theme</code> option in the YAML (see lines 11-12):</p>
 </div>
 <div class="sourceCode" id="cb22"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1"></a><span class="co">---</span></span>
 <span id="cb22-2"><a href="#cb22-2"></a><span class="an">title:</span><span class="co"> "Are dogs or cats cuter?"</span></span>
@@ -1367,7 +1383,183 @@
 <span id="cb22-17"><a href="#cb22-17"></a><span class="co">  message: false</span></span>
 <span id="cb22-18"><a href="#cb22-18"></a><span class="co">  warning: false</span></span>
 <span id="cb22-19"><a href="#cb22-19"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section><section class="slide level2"><div class="footer footer-default">
+</section><section id="color-vars" class="slide level2" data-menu-title="Define Sass vars for colors"><h2></h2>
+<p><span class="slide-title-smaller">Define some color variables</span></p>
+<hr>
+<div class="body-text">
+<p>Because this is NCEAS-funded research (jk jk, but let’s pretend), we’ll be using NCEAS colors to style our report. Define any colors you plan to use throughout your stylesheet using the syntax, <code>$colorName: HEXcode;</code></p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="3-10"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb23-1"><a href="#cb23-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a></span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="er">// colors</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a>$green<span class="in">: #348553;</span></span>
+<span id="cb23-5"><a href="#cb23-5"></a>$light-green<span class="in">: #589244; </span></span>
+<span id="cb23-6"><a href="#cb23-6"></a>$yellow<span class="in">: #E9A300</span>;</span>
+<span id="cb23-7"><a href="#cb23-7"></a>$red<span class="in">: #A23601</span>;</span>
+<span id="cb23-8"><a href="#cb23-8"></a>$white<span class="in">: #FFFFFF</span>;</span>
+<span id="cb23-9"><a href="#cb23-9"></a>$gray<span class="in">: #ADADAD</span>;</span>
+<span id="cb23-10"><a href="#cb23-10"></a>$black<span class="in">: #525452; </span></span>
+<span id="cb23-11"><a href="#cb23-11"></a></span>
+<span id="cb23-12"><a href="#cb23-12"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb23-13"><a href="#cb23-13"></a></span>
+<span id="cb23-14"><a href="#cb23-14"></a><span class="er">// CSS rules will go here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="body-text important-text-bg">
+<p><strong>Note:</strong> You won’t see new styling on your report just yet! We’ve defined some Sass variables here, but haven’t yet applied them.</p>
+</div>
+</section><section id="import-fonts-1" class="slide level2" data-menu-title="Import Google fonts (1/2)"><h2></h2>
+<p><span class="slide-title-smaller">Import Google fonts (1/2)</span></p>
+<hr>
+<div class="body-text center-text">
+<p>Start by exploring fonts at <a href="https://fonts.google.com/" class="uri">https://fonts.google.com/</a>. Once you found a one (or more) that you like:</p>
+</div>
+<div>
+<div class="body-text">
+<ol type="1">
+<li class="fragment"><p>Select which weights and styles to import from the <strong>Styles</strong> section – click the <strong>+</strong> button, <img src="images/gf+.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;">, to the right of the style you want.</p></li>
+<li class="fragment"><p>Click on <strong>View selected families</strong>, <img src="images/view-fonts.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;"> (top right corner), to see all of your selected fonts. Under the <strong>Use on the web</strong> section, select the radio button for <strong><span class="citation" data-cites="import">@import</span></strong> and copy everything between the <code>&lt;style&gt; &lt;/style&gt;</code> tags (starting with <code>@import</code> and ending with <code>;</code>) to your clipboard.</p></li>
+</ol>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/google-fonts.gif" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="import-fonts-2" class="slide level2" data-menu-title="Import Google fonts (2/2)"><h2></h2>
+<p><span class="slide-title-smaller">Import &amp; define Google font variables (2/2)</span></p>
+<hr>
+<div class="body-text">
+<ol start="3" type="1">
+<li>Paste your import code into <code>my-report-styles.scss</code>, beneath <code>/*-- scss:defaults --*/</code>
+</li>
+</ol>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="3-4"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb24-1"><a href="#cb24-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a></span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="er">// import fonts from fonts.google.com</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Arvo&amp;family=Nunito:wght@400;800&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb24-5"><a href="#cb24-5"></a></span>
+<span id="cb24-6"><a href="#cb24-6"></a><span class="er">// colors</span></span>
+<span id="cb24-7"><a href="#cb24-7"></a>$green<span class="in">: #348553;</span></span>
+<span id="cb24-8"><a href="#cb24-8"></a>$light-green<span class="in">: #589244; </span></span>
+<span id="cb24-9"><a href="#cb24-9"></a>$yellow<span class="in">: #E9A300</span>;</span>
+<span id="cb24-10"><a href="#cb24-10"></a>$red<span class="in">: #A23601</span>;</span>
+<span id="cb24-11"><a href="#cb24-11"></a>$white<span class="in">: #FFFFFF</span>;</span>
+<span id="cb24-12"><a href="#cb24-12"></a>$gray<span class="in">: #ADADAD</span>;</span>
+<span id="cb24-13"><a href="#cb24-13"></a>$black<span class="in">: #525452; </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="body-text">
+<p>Here, we import two font families:</p>
+<ul>
+<li>
+<a href="https://fonts.google.com/specimen/Arvo?query=arvo">Arvo</a>, in Regular 400, a <a href="https://fonts.google.com/knowledge/glossary/serif">serif font</a> that we’ll use for headers</li>
+<li>
+<a href="https://fonts.google.com/specimen/Nunito?query=nunito">Nunito</a>, in Regular 400 and ExtraBold 800, a <a href="https://fonts.google.com/knowledge/glossary/sans_serif">sans-serif font</a> that we’ll use for everything else!</li>
+</ul>
+<div class="important-text-bg center-text">
+<p><strong>Note:</strong> You <em>must</em> import a higher font weight (e.g.&nbsp;800) if you wish to <strong>bold</strong> text.</p>
+</div>
+</div>
+</section><section id="apply-colors-fonts" class="slide level2" data-menu-title="Apply colors &amp; fonts"><h2></h2>
+<p><span class="slide-title">Checking in – any questions?</span></p>
+<hr>
+<p><br></p>
+<div class="fragment">
+<div class="center-text">
+<p>Ok, now let’s <em>use</em> our colors &amp; fonts</p>
+</div>
+</div>
+<div class="fragment">
+<p><br></p>
+<div class="body-text">
+<div class="center-text">
+<p>We can do this in <strong>two different ways</strong> (spoiler, we’ll be using both!):</p>
+</div>
+<div>
+<ol type="1">
+<li class="fragment">
+<span class="yellow-underline"><strong>Specifying <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">Quarto’s Sass Variables</a></strong></span> – this is a super fast and easy way to make larger-scale changes to your theme</li>
+<li class="fragment">
+<span class="yellow-underline"><strong>Writing CSS rules</strong></span>, just like we practiced earlier – this is great for making fine-tuned adjustments</li>
+</ol>
+</div>
+</div>
+</div>
+</section><section id="specify-fonts-vars" class="slide level2" data-menu-title="Specify font variables"><h2></h2>
+<p><span class="slide-title">Specify font variables</span></p>
+<hr>
+<div class="body-text">
+<p>Define font style Sass variables, beneath <code>/*-- scss:defaults --*/</code>, using the syntax below:</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="15-17"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb25-1"><a href="#cb25-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a></span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="er">// import fonts from fonts.google.com </span></span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Arvo&amp;family=Nunito:wght@400;800&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a></span>
+<span id="cb25-6"><a href="#cb25-6"></a><span class="er">// colors</span></span>
+<span id="cb25-7"><a href="#cb25-7"></a>$green<span class="in">: #348553;</span></span>
+<span id="cb25-8"><a href="#cb25-8"></a>$light-green<span class="in">: #589244; </span></span>
+<span id="cb25-9"><a href="#cb25-9"></a>$yellow<span class="in">: #E9A300</span>;</span>
+<span id="cb25-10"><a href="#cb25-10"></a>$red<span class="in">: #A23601</span>;</span>
+<span id="cb25-11"><a href="#cb25-11"></a>$white<span class="in">: #FFFFFF</span>;</span>
+<span id="cb25-12"><a href="#cb25-12"></a>$gray<span class="in">: #ADADAD</span>;</span>
+<span id="cb25-13"><a href="#cb25-13"></a>$black<span class="in">: #525452; </span></span>
+<span id="cb25-14"><a href="#cb25-14"></a></span>
+<span id="cb25-15"><a href="#cb25-15"></a><span class="er">// font styles</span></span>
+<span id="cb25-16"><a href="#cb25-16"></a>$font-family-sans-serif<span class="in">: 'Nunito</span>'<span class="op">,</span> sans-serif;</span>
+<span id="cb25-17"><a href="#cb25-17"></a>$font-family-serif<span class="in">: 'Arvo</span>'<span class="op">,</span> serif; </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="important-text-bg body-text">
+<p><strong>Note:</strong> <code>$font-family-sans-serif</code> will automatically be applied across your Quarto document.</p>
+</div>
+</section><section id="additional-sass-vars" class="slide level2" data-menu-title="Additional Sass variables"><h2></h2>
+<p><span class="slide-title">Specify additional variables</span></p>
+<hr>
+<div class="body-text">
+<p><strong>Note:</strong> All specified Sass variables could alternatively be written using CSS. <em>However</em>, this approach is quick, easy to write, and importantly, <em>easy to read</em>.</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="19-27"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb26-1"><a href="#cb26-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a></span>
+<span id="cb26-3"><a href="#cb26-3"></a><span class="er">// import fonts from fonts.google.com </span></span>
+<span id="cb26-4"><a href="#cb26-4"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Arvo&amp;family=Nunito:wght@400;800&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb26-5"><a href="#cb26-5"></a></span>
+<span id="cb26-6"><a href="#cb26-6"></a><span class="er">// colors</span></span>
+<span id="cb26-7"><a href="#cb26-7"></a>$green<span class="in">: #348553;</span></span>
+<span id="cb26-8"><a href="#cb26-8"></a>$light-green<span class="in">: #589244; </span></span>
+<span id="cb26-9"><a href="#cb26-9"></a>$yellow<span class="in">: #E9A300</span>;</span>
+<span id="cb26-10"><a href="#cb26-10"></a>$red<span class="in">: #A23601</span>;</span>
+<span id="cb26-11"><a href="#cb26-11"></a>$white<span class="in">: #FFFFFF</span>;</span>
+<span id="cb26-12"><a href="#cb26-12"></a>$gray<span class="in">: #ADADAD</span>;</span>
+<span id="cb26-13"><a href="#cb26-13"></a>$black<span class="in">: #525452; </span></span>
+<span id="cb26-14"><a href="#cb26-14"></a></span>
+<span id="cb26-15"><a href="#cb26-15"></a><span class="er">// font styles</span></span>
+<span id="cb26-16"><a href="#cb26-16"></a>$font-family-sans-serif<span class="in">: 'Nunito</span>'<span class="op">,</span> sans-serif;</span>
+<span id="cb26-17"><a href="#cb26-17"></a>$font-family-serif<span class="in">: 'Arvo</span>'<span class="op">,</span> serif; </span>
+<span id="cb26-18"><a href="#cb26-18"></a></span>
+<span id="cb26-19"><a href="#cb26-19"></a><span class="er">// find all Quarto Sass vars here: https://quarto.org/docs/output-formats/html-themes.html#sass-variables</span></span>
+<span id="cb26-20"><a href="#cb26-20"></a>$font-size-root<span class="in">: 1.2em; </span></span>
+<span id="cb26-21"><a href="#cb26-21"></a>$body-color<span class="in">: $black</span>;</span>
+<span id="cb26-22"><a href="#cb26-22"></a>$link-color<span class="in">: $red</span>; </span>
+<span id="cb26-23"><a href="#cb26-23"></a>$toc-color<span class="in">: $green</span>; </span>
+<span id="cb26-24"><a href="#cb26-24"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
+<span id="cb26-25"><a href="#cb26-25"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
+<span id="cb26-26"><a href="#cb26-26"></a>$code-color<span class="in">: $light-green</span>; </span>
+<span id="cb26-27"><a href="#cb26-27"></a>$code-bg<span class="in">: $white</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="apply-colors-fonts" class="slide level2" data-menu-title="Apply colors &amp; fonts"><h2></h2>
+<p><span class="slide-title">Checking in – any questions?</span></p>
+<hr>
+<div class="footer footer-default">
 
 </div>
 </section>
