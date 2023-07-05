@@ -558,7 +558,7 @@ h3 {
 
 ##  {#create-new-classes data-menu-title="Create new class selectors"}
 
-[Create & apply new class selectors]{.slide-title}
+[Create new class selectors]{.slide-title}
 
 <hr>
 
@@ -577,7 +577,7 @@ Let's say we want to better highlight the very last sentence of our report, whic
 knitr::include_graphics("images/boring-text.png")
 ```
 
-We can create & apply three new classes that:
+We can create three new classes that:
 
 - increase the size of the text (`.large-text`)
 - center the text (`.center-text`)
@@ -670,6 +670,36 @@ h3 {
 :::
 
 ::::
+
+---
+
+##  {#apply-new-classes data-menu-title="Apply new class selectors"}
+
+[Apply new class selectors]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+Now that we've written our class selectors, we need to apply them to the HTML elements we want to style (recall, **HTML elements can have more than one class**):
+:::
+
+```{html}
+#| eval: false
+#| echo: true
+<p class="large-text highlight-text center-text">Explore our analysis on [{{< fa brands github >}} GitHub](https://github.com/samanthacsik/cute-cats-dogs). If you have suggestions on how to improve this report, please [file an issue](https://github.com/samanthacsik/cute-cats-dogs/issues).</p>
+```
+
+::: {.body-text}
+which will render as:
+:::
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "20px"
+knitr::include_graphics("images/standout-text.png")
+```
 
 ---
 

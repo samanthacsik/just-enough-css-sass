@@ -122,13 +122,9 @@ knitr::include_graphics("images/bob-ross.gif")
 
 ::: {.center-text}
 
-::: {.large-body-text}
-This is a Quarto Presentation. To learn more, visit <https://quarto.org>.
-:::
+[This is a Quarto Presentation. To learn more, visit <https://quarto.org>.]{.large-body-text}
 
-::: {.body-text}
-*If you see mistakes or want to suggest changes, please create an [issue](https://github.com/samanthacsik/just-enough-css-sass/issues) on the source repository.*
-:::
+[*If you see mistakes or want to suggest changes, please create an [issue](https://github.com/samanthacsik/just-enough-css-sass/issues) on the source repository.*]{.body-text}
 
 :::
 
