@@ -102,7 +102,7 @@ knitr::include_graphics("images/apply-styles-to-html.png")
 ## `practice-styles.css`
 
 ::: {.body-text}
-**Note** the required `/*-- scss:rules --*/` section header, which has been added at the top of the file
+**Note** the required `/*-- scss:rules --*/` region decorator, which has been added at the top of the file ([required by Quarto](https://quarto.org/docs/output-formats/html-themes-more.html)).
 :::
 
 ```{css}
