@@ -99,7 +99,7 @@ execute:
 <hr>
 
 ::: {.body-text}
-Because this is NCEAS-funded research (jk jk, but let's pretend), we'll be using NCEAS colors to style our report. Define any colors you plan to use throughout your stylesheet using the syntax, `$colorName: HEXcode;`
+Because this is NCEAS-funded research (jk jk, but let's pretend), we'll be using NCEAS colors to style our report. Define any colors you plan to use throughout your stylesheet using the syntax, `$colorName: #HEXcode;`
 :::
 
 ```{css}
