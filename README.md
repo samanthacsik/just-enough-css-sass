@@ -1,4 +1,4 @@
-# Just Enough CSS (and Sass) for data scientists
+# Just Enough CSS (and Sass) for Data Scientists
 
 **NCEAS Roundtable, August 2023**
 
