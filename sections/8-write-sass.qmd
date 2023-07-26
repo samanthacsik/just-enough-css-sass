@@ -35,7 +35,7 @@ Open & render [`cuteness-report.qmd`](https://github.com/samanthacsik/cute-cats-
 ```{css}
 #| eval: false
 #| echo: true
-touch practice-styles.scss 
+touch my-report-styles.scss 
 ```
 
 . . . 
