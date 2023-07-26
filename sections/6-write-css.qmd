@@ -43,7 +43,7 @@ a {
 }
 
 /* large red text */
-.important-text{
+.important-text {
   color: red;
   font-size: 30px;
 }
@@ -65,7 +65,7 @@ Below, we **(a)** link our stylesheet *(line 5)*, and **(b)** use our class sele
 <html> <!-- This tag represents the root of the HTML doc -->
 <head>
  <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
- <link rel="stylesheet" href="practice-styles-KEY.css">
+ <link rel="stylesheet" href="practice-styles.css">
 </head>
 <body> 
   <!-- Write all the contents of the HTML doc here -->
@@ -134,7 +134,7 @@ a {
 }
 
 /* large red text */
-.important-text{
+.important-text {
   color: red;
   font-size: 30px;
 }
