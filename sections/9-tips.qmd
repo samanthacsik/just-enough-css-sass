@@ -4,7 +4,7 @@ format: revealjs
 
 ##  {#challenging data-menu-title="Styling webpages is challenging"}
 
-[Styling webpages can be challenging. Here are some tips!]{.slide-title-smallest}
+[Styling web pages can be challenging. Here are some tips!]{.slide-title-smallest}
 
 <hr>
 
