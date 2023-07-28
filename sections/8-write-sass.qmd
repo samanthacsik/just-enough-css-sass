@@ -130,9 +130,9 @@ $black: #525452;
 
 ---
 
-##  {#import-fonts-1 data-menu-title="Import Google fonts (1/2)"}
+##  {#import-fonts-1 data-menu-title="Import Google fonts"}
 
-[Import Google fonts (1/2)]{.slide-title-smaller}
+[Import Google fonts]{.slide-title-smaller}
 
 <hr>
 
@@ -158,9 +158,9 @@ knitr::include_graphics("images/google-fonts.gif")
 
 ---
 
-##  {#import-fonts-2 data-menu-title="Import Google fonts (2/2)"}
+##  {#import-fonts-2 data-menu-title="Define font variables"}
 
-[Import & define Google font variables (2/2)]{.slide-title-smaller}
+[Import & define Google font variables]{.slide-title-smaller}
 
 <hr>
 
