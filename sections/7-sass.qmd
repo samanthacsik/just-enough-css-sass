@@ -90,7 +90,7 @@ $red: #A23601;
 /* use vars in CSS rules */
 
 h1 {
-  font-color: $green;
+  color: $green;
 }
 
 .button-styling {
