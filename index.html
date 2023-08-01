@@ -1513,7 +1513,7 @@
 <p><strong>Note:</strong> <code>$font-family-sans-serif</code> will automatically be applied across your Quarto document.</p>
 </div>
 </section><section id="additional-sass-vars" class="slide level2" data-menu-title="Additional Sass variables"><h2></h2>
-<p><span class="slide-title">Specify additional variables</span></p>
+<p><span class="slide-title">Specify additional <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">Quarto variables</a></span></p>
 <hr>
 <div class="body-text">
 <p><strong>Note:</strong> All specified Sass variables could alternatively be written using CSS. <em>However</em>, this approach is quick, easy to write, and importantly, <em>easy to read</em>.</p>
@@ -1538,14 +1538,12 @@
 <span id="cb26-17"><a href="#cb26-17"></a>$font-family-serif<span class="in">: 'Arvo</span>'<span class="op">,</span> serif; </span>
 <span id="cb26-18"><a href="#cb26-18"></a></span>
 <span id="cb26-19"><a href="#cb26-19"></a><span class="er">// find all Quarto Sass vars here: https://quarto.org/docs/output-formats/html-themes.html#sass-variables</span></span>
-<span id="cb26-20"><a href="#cb26-20"></a>$font-size-root<span class="in">: 1.2em; </span></span>
-<span id="cb26-21"><a href="#cb26-21"></a>$body-color<span class="in">: $black</span>;</span>
-<span id="cb26-22"><a href="#cb26-22"></a>$link-color<span class="in">: $red</span>; </span>
-<span id="cb26-23"><a href="#cb26-23"></a>$toc-color<span class="in">: $green</span>; </span>
-<span id="cb26-24"><a href="#cb26-24"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
-<span id="cb26-25"><a href="#cb26-25"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
-<span id="cb26-26"><a href="#cb26-26"></a>$code-color<span class="in">: $light-green</span>; </span>
-<span id="cb26-27"><a href="#cb26-27"></a>$code-bg<span class="in">: $white</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-20"><a href="#cb26-20"></a>$body-color<span class="in">: $black</span>;</span>
+<span id="cb26-21"><a href="#cb26-21"></a>$link-color<span class="in">: $red</span>; </span>
+<span id="cb26-22"><a href="#cb26-22"></a>$toc-color<span class="in">: $green</span>; </span>
+<span id="cb26-23"><a href="#cb26-23"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
+<span id="cb26-24"><a href="#cb26-24"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
+<span id="cb26-25"><a href="#cb26-25"></a>$code-color<span class="in">: $light-green</span>; </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="rerender" class="slide level2" data-menu-title="Re-render report"><h2></h2>
 <p><span class="slide-title-smallest">Re-render to check out your new styling</span></p>
@@ -1637,28 +1635,26 @@
 <span id="cb27-17"><a href="#cb27-17"></a>$font-family-serif<span class="in">: 'Arvo</span>'<span class="op">,</span> serif; </span>
 <span id="cb27-18"><a href="#cb27-18"></a></span>
 <span id="cb27-19"><a href="#cb27-19"></a><span class="er">// find all Quarto Sass vars here: https://quarto.org/docs/output-formats/html-themes.html#sass-variables</span></span>
-<span id="cb27-20"><a href="#cb27-20"></a>$font-size-root<span class="in">: 1.2em; </span></span>
-<span id="cb27-21"><a href="#cb27-21"></a>$body-color<span class="in">: $black</span>;</span>
-<span id="cb27-22"><a href="#cb27-22"></a>$link-color<span class="in">: $red</span>; </span>
-<span id="cb27-23"><a href="#cb27-23"></a>$toc-color<span class="in">: $green</span>; </span>
-<span id="cb27-24"><a href="#cb27-24"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
-<span id="cb27-25"><a href="#cb27-25"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
-<span id="cb27-26"><a href="#cb27-26"></a>$code-color<span class="in">: $light-green</span>; </span>
-<span id="cb27-27"><a href="#cb27-27"></a>$code-bg<span class="in">: $white</span>;</span>
+<span id="cb27-20"><a href="#cb27-20"></a>$body-color<span class="in">: $black</span>;</span>
+<span id="cb27-21"><a href="#cb27-21"></a>$link-color<span class="in">: $red</span>; </span>
+<span id="cb27-22"><a href="#cb27-22"></a>$toc-color<span class="in">: $green</span>; </span>
+<span id="cb27-23"><a href="#cb27-23"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
+<span id="cb27-24"><a href="#cb27-24"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
+<span id="cb27-25"><a href="#cb27-25"></a>$code-color<span class="in">: $light-green</span>; </span>
+<span id="cb27-26"><a href="#cb27-26"></a></span>
+<span id="cb27-27"><a href="#cb27-27"></a><span class="co">/*-- scss:rules --*/</span></span>
 <span id="cb27-28"><a href="#cb27-28"></a></span>
-<span id="cb27-29"><a href="#cb27-29"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb27-30"><a href="#cb27-30"></a></span>
-<span id="cb27-31"><a href="#cb27-31"></a><span class="er">// level two styling</span></span>
-<span id="cb27-32"><a href="#cb27-32"></a>h2 { </span>
-<span id="cb27-33"><a href="#cb27-33"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
-<span id="cb27-34"><a href="#cb27-34"></a>  <span class="kw">border-bottom</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> $yellow<span class="op">;</span></span>
-<span id="cb27-35"><a href="#cb27-35"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
-<span id="cb27-36"><a href="#cb27-36"></a>}</span>
-<span id="cb27-37"><a href="#cb27-37"></a></span>
-<span id="cb27-38"><a href="#cb27-38"></a><span class="er">// level three stying</span></span>
-<span id="cb27-39"><a href="#cb27-39"></a>h3 {</span>
-<span id="cb27-40"><a href="#cb27-40"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
-<span id="cb27-41"><a href="#cb27-41"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-29"><a href="#cb27-29"></a><span class="er">// level two styling</span></span>
+<span id="cb27-30"><a href="#cb27-30"></a>h2 { </span>
+<span id="cb27-31"><a href="#cb27-31"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb27-32"><a href="#cb27-32"></a>  <span class="kw">border-bottom</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> $yellow<span class="op">;</span></span>
+<span id="cb27-33"><a href="#cb27-33"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
+<span id="cb27-34"><a href="#cb27-34"></a>}</span>
+<span id="cb27-35"><a href="#cb27-35"></a></span>
+<span id="cb27-36"><a href="#cb27-36"></a><span class="er">// level three stying</span></span>
+<span id="cb27-37"><a href="#cb27-37"></a>h3 {</span>
+<span id="cb27-38"><a href="#cb27-38"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb27-39"><a href="#cb27-39"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1713,33 +1709,32 @@
 <span id="cb28-23"><a href="#cb28-23"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
 <span id="cb28-24"><a href="#cb28-24"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
 <span id="cb28-25"><a href="#cb28-25"></a>$code-color<span class="in">: $light-green</span>; </span>
-<span id="cb28-26"><a href="#cb28-26"></a>$code-bg<span class="in">: $white</span>;</span>
-<span id="cb28-27"><a href="#cb28-27"></a></span>
-<span id="cb28-28"><a href="#cb28-28"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb28-29"><a href="#cb28-29"></a></span>
-<span id="cb28-30"><a href="#cb28-30"></a><span class="er">// level two styling</span></span>
-<span id="cb28-31"><a href="#cb28-31"></a>h2 { </span>
-<span id="cb28-32"><a href="#cb28-32"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
-<span id="cb28-33"><a href="#cb28-33"></a>  <span class="kw">border-bottom</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> $yellow<span class="op">;</span></span>
-<span id="cb28-34"><a href="#cb28-34"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
-<span id="cb28-35"><a href="#cb28-35"></a>}</span>
-<span id="cb28-36"><a href="#cb28-36"></a></span>
-<span id="cb28-37"><a href="#cb28-37"></a><span class="er">// level three stying</span></span>
-<span id="cb28-38"><a href="#cb28-38"></a>h3 {</span>
-<span id="cb28-39"><a href="#cb28-39"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
-<span id="cb28-40"><a href="#cb28-40"></a>}</span>
-<span id="cb28-41"><a href="#cb28-41"></a></span>
-<span id="cb28-42"><a href="#cb28-42"></a><span class="er">// style document title </span></span>
-<span id="cb28-43"><a href="#cb28-43"></a><span class="fu">.title</span> {</span>
-<span id="cb28-44"><a href="#cb28-44"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
-<span id="cb28-45"><a href="#cb28-45"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
-<span id="cb28-46"><a href="#cb28-46"></a>  <span class="kw">font-size</span>: <span class="dv">2.3</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb28-47"><a href="#cb28-47"></a>}</span>
-<span id="cb28-48"><a href="#cb28-48"></a></span>
-<span id="cb28-49"><a href="#cb28-49"></a><span class="er">// adjust size of documment subtitle</span></span>
-<span id="cb28-50"><a href="#cb28-50"></a><span class="fu">.lead</span> {</span>
-<span id="cb28-51"><a href="#cb28-51"></a>  <span class="kw">font-size</span>: <span class="dv">1.5</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb28-52"><a href="#cb28-52"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb28-26"><a href="#cb28-26"></a></span>
+<span id="cb28-27"><a href="#cb28-27"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb28-28"><a href="#cb28-28"></a></span>
+<span id="cb28-29"><a href="#cb28-29"></a><span class="er">// level two styling</span></span>
+<span id="cb28-30"><a href="#cb28-30"></a>h2 { </span>
+<span id="cb28-31"><a href="#cb28-31"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb28-32"><a href="#cb28-32"></a>  <span class="kw">border-bottom</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> $yellow<span class="op">;</span></span>
+<span id="cb28-33"><a href="#cb28-33"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
+<span id="cb28-34"><a href="#cb28-34"></a>}</span>
+<span id="cb28-35"><a href="#cb28-35"></a></span>
+<span id="cb28-36"><a href="#cb28-36"></a><span class="er">// level three stying</span></span>
+<span id="cb28-37"><a href="#cb28-37"></a>h3 {</span>
+<span id="cb28-38"><a href="#cb28-38"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb28-39"><a href="#cb28-39"></a>}</span>
+<span id="cb28-40"><a href="#cb28-40"></a></span>
+<span id="cb28-41"><a href="#cb28-41"></a><span class="er">// style document title </span></span>
+<span id="cb28-42"><a href="#cb28-42"></a><span class="fu">.title</span> {</span>
+<span id="cb28-43"><a href="#cb28-43"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb28-44"><a href="#cb28-44"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
+<span id="cb28-45"><a href="#cb28-45"></a>  <span class="kw">font-size</span>: <span class="dv">2.3</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb28-46"><a href="#cb28-46"></a>}</span>
+<span id="cb28-47"><a href="#cb28-47"></a></span>
+<span id="cb28-48"><a href="#cb28-48"></a><span class="er">// adjust size of documment subtitle</span></span>
+<span id="cb28-49"><a href="#cb28-49"></a><span class="fu">.lead</span> {</span>
+<span id="cb28-50"><a href="#cb28-50"></a>  <span class="kw">font-size</span>: <span class="dv">1.5</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb28-51"><a href="#cb28-51"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1786,59 +1781,57 @@
 <span id="cb29-17"><a href="#cb29-17"></a>$font-family-serif<span class="in">: 'Arvo</span>'<span class="op">,</span> serif; </span>
 <span id="cb29-18"><a href="#cb29-18"></a></span>
 <span id="cb29-19"><a href="#cb29-19"></a><span class="er">// find all Quarto Sass vars here: https://quarto.org/docs/output-formats/html-themes.html#sass-variables</span></span>
-<span id="cb29-20"><a href="#cb29-20"></a>$font-size-root<span class="in">: 1.2em; </span></span>
-<span id="cb29-21"><a href="#cb29-21"></a>$body-color<span class="in">: $black</span>;</span>
-<span id="cb29-22"><a href="#cb29-22"></a>$link-color<span class="in">: $red</span>; </span>
-<span id="cb29-23"><a href="#cb29-23"></a>$toc-color<span class="in">: $green</span>; </span>
-<span id="cb29-24"><a href="#cb29-24"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
-<span id="cb29-25"><a href="#cb29-25"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
-<span id="cb29-26"><a href="#cb29-26"></a>$code-color<span class="in">: $light-green</span>; </span>
-<span id="cb29-27"><a href="#cb29-27"></a>$code-bg<span class="in">: $white</span>;</span>
+<span id="cb29-20"><a href="#cb29-20"></a>$body-color<span class="in">: $black</span>;</span>
+<span id="cb29-21"><a href="#cb29-21"></a>$link-color<span class="in">: $red</span>; </span>
+<span id="cb29-22"><a href="#cb29-22"></a>$toc-color<span class="in">: $green</span>; </span>
+<span id="cb29-23"><a href="#cb29-23"></a>$toc-active-border<span class="in">: $yellow</span>; </span>
+<span id="cb29-24"><a href="#cb29-24"></a>$toc-inactive-border<span class="in">: $gray</span>; </span>
+<span id="cb29-25"><a href="#cb29-25"></a>$code-color<span class="in">: $light-green</span>; </span>
+<span id="cb29-26"><a href="#cb29-26"></a></span>
+<span id="cb29-27"><a href="#cb29-27"></a><span class="co">/*-- scss:rules --*/</span></span>
 <span id="cb29-28"><a href="#cb29-28"></a></span>
-<span id="cb29-29"><a href="#cb29-29"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb29-30"><a href="#cb29-30"></a></span>
-<span id="cb29-31"><a href="#cb29-31"></a><span class="er">// level two styling</span></span>
-<span id="cb29-32"><a href="#cb29-32"></a>h2 { </span>
-<span id="cb29-33"><a href="#cb29-33"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
-<span id="cb29-34"><a href="#cb29-34"></a>  <span class="kw">border-bottom</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> $yellow<span class="op">;</span></span>
-<span id="cb29-35"><a href="#cb29-35"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
-<span id="cb29-36"><a href="#cb29-36"></a>}</span>
-<span id="cb29-37"><a href="#cb29-37"></a></span>
-<span id="cb29-38"><a href="#cb29-38"></a><span class="er">// level three stying</span></span>
-<span id="cb29-39"><a href="#cb29-39"></a>h3 {</span>
-<span id="cb29-40"><a href="#cb29-40"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
-<span id="cb29-41"><a href="#cb29-41"></a>}</span>
-<span id="cb29-42"><a href="#cb29-42"></a></span>
-<span id="cb29-43"><a href="#cb29-43"></a><span class="er">// style document title </span></span>
-<span id="cb29-44"><a href="#cb29-44"></a><span class="fu">.title</span> {</span>
-<span id="cb29-45"><a href="#cb29-45"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
-<span id="cb29-46"><a href="#cb29-46"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
-<span id="cb29-47"><a href="#cb29-47"></a>  <span class="kw">font-size</span>: <span class="dv">2.3</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb29-48"><a href="#cb29-48"></a>}</span>
-<span id="cb29-49"><a href="#cb29-49"></a></span>
-<span id="cb29-50"><a href="#cb29-50"></a><span class="er">// adjust size of documment subtitle</span></span>
-<span id="cb29-51"><a href="#cb29-51"></a><span class="fu">.lead</span> {</span>
-<span id="cb29-52"><a href="#cb29-52"></a>  <span class="kw">font-size</span>: <span class="dv">1.5</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb29-53"><a href="#cb29-53"></a>}</span>
-<span id="cb29-54"><a href="#cb29-54"></a></span>
-<span id="cb29-55"><a href="#cb29-55"></a><span class="er">// center text</span></span>
-<span id="cb29-56"><a href="#cb29-56"></a><span class="fu">.center-text</span> { </span>
-<span id="cb29-57"><a href="#cb29-57"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb29-58"><a href="#cb29-58"></a>}</span>
-<span id="cb29-59"><a href="#cb29-59"></a></span>
-<span id="cb29-60"><a href="#cb29-60"></a><span class="fu">.large-text</span> {</span>
-<span id="cb29-61"><a href="#cb29-61"></a>  <span class="kw">font-size</span>: <span class="dv">1.4</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb29-62"><a href="#cb29-62"></a>}</span>
-<span id="cb29-63"><a href="#cb29-63"></a></span>
-<span id="cb29-64"><a href="#cb29-64"></a><span class="er">// yellow highlight</span></span>
-<span id="cb29-65"><a href="#cb29-65"></a><span class="fu">.highlight-text</span> {</span>
-<span id="cb29-66"><a href="#cb29-66"></a>  <span class="kw">background-color</span>: <span class="fu">rgba(</span><span class="dv">233</span><span class="op">,</span> <span class="dv">163</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.2</span><span class="fu">)</span><span class="op">;</span> </span>
-<span id="cb29-67"><a href="#cb29-67"></a>  <span class="kw">padding-top</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
-<span id="cb29-68"><a href="#cb29-68"></a>  <span class="kw">padding-bottom</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
-<span id="cb29-69"><a href="#cb29-69"></a>  <span class="kw">padding-right</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
-<span id="cb29-70"><a href="#cb29-70"></a>  <span class="kw">padding-left</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
-<span id="cb29-71"><a href="#cb29-71"></a>  <span class="kw">border-radius</span>: <span class="dv">25</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb29-72"><a href="#cb29-72"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb29-29"><a href="#cb29-29"></a><span class="er">// level two styling</span></span>
+<span id="cb29-30"><a href="#cb29-30"></a>h2 { </span>
+<span id="cb29-31"><a href="#cb29-31"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb29-32"><a href="#cb29-32"></a>  <span class="kw">border-bottom</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> $yellow<span class="op">;</span></span>
+<span id="cb29-33"><a href="#cb29-33"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
+<span id="cb29-34"><a href="#cb29-34"></a>}</span>
+<span id="cb29-35"><a href="#cb29-35"></a></span>
+<span id="cb29-36"><a href="#cb29-36"></a><span class="er">// level three stying</span></span>
+<span id="cb29-37"><a href="#cb29-37"></a>h3 {</span>
+<span id="cb29-38"><a href="#cb29-38"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb29-39"><a href="#cb29-39"></a>}</span>
+<span id="cb29-40"><a href="#cb29-40"></a></span>
+<span id="cb29-41"><a href="#cb29-41"></a><span class="er">// style document title </span></span>
+<span id="cb29-42"><a href="#cb29-42"></a><span class="fu">.title</span> {</span>
+<span id="cb29-43"><a href="#cb29-43"></a>  <span class="kw">color</span>: $green<span class="op">;</span></span>
+<span id="cb29-44"><a href="#cb29-44"></a>  <span class="kw">font-family</span>: $font-family-serif<span class="op">;</span></span>
+<span id="cb29-45"><a href="#cb29-45"></a>  <span class="kw">font-size</span>: <span class="dv">2.3</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb29-46"><a href="#cb29-46"></a>}</span>
+<span id="cb29-47"><a href="#cb29-47"></a></span>
+<span id="cb29-48"><a href="#cb29-48"></a><span class="er">// adjust size of documment subtitle</span></span>
+<span id="cb29-49"><a href="#cb29-49"></a><span class="fu">.lead</span> {</span>
+<span id="cb29-50"><a href="#cb29-50"></a>  <span class="kw">font-size</span>: <span class="dv">1.5</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb29-51"><a href="#cb29-51"></a>}</span>
+<span id="cb29-52"><a href="#cb29-52"></a></span>
+<span id="cb29-53"><a href="#cb29-53"></a><span class="er">// center text</span></span>
+<span id="cb29-54"><a href="#cb29-54"></a><span class="fu">.center-text</span> { </span>
+<span id="cb29-55"><a href="#cb29-55"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb29-56"><a href="#cb29-56"></a>}</span>
+<span id="cb29-57"><a href="#cb29-57"></a></span>
+<span id="cb29-58"><a href="#cb29-58"></a><span class="fu">.large-text</span> {</span>
+<span id="cb29-59"><a href="#cb29-59"></a>  <span class="kw">font-size</span>: <span class="dv">1.4</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb29-60"><a href="#cb29-60"></a>}</span>
+<span id="cb29-61"><a href="#cb29-61"></a></span>
+<span id="cb29-62"><a href="#cb29-62"></a><span class="er">// yellow highlight</span></span>
+<span id="cb29-63"><a href="#cb29-63"></a><span class="fu">.highlight-text</span> {</span>
+<span id="cb29-64"><a href="#cb29-64"></a>  <span class="kw">background-color</span>: <span class="fu">rgba(</span><span class="dv">233</span><span class="op">,</span> <span class="dv">163</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.2</span><span class="fu">)</span><span class="op">;</span> </span>
+<span id="cb29-65"><a href="#cb29-65"></a>  <span class="kw">padding-top</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
+<span id="cb29-66"><a href="#cb29-66"></a>  <span class="kw">padding-bottom</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
+<span id="cb29-67"><a href="#cb29-67"></a>  <span class="kw">padding-right</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
+<span id="cb29-68"><a href="#cb29-68"></a>  <span class="kw">padding-left</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> </span>
+<span id="cb29-69"><a href="#cb29-69"></a>  <span class="kw">border-radius</span>: <span class="dv">25</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb29-70"><a href="#cb29-70"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
